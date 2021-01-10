@@ -49,8 +49,6 @@ if DEBUG:
 # Application definition
 
 INSTALLED_APPS = [
-    'maintenance_mode',
-
     # Django Admin Interface
     'admin_interface',
     'colorfield',
@@ -84,9 +82,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
-    # Django Maintenance Mode
-    'maintenance_mode.middleware.MaintenanceModeMiddleware',
 ]
 
 ROOT_URLCONF = 'drf_project.urls'
@@ -104,9 +99,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-
-                # Django Maintenance Mode
-                'maintenance_mode.context_processors.maintenance_mode'
             ],
         },
     },
@@ -247,18 +239,3 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 # https://github.com/adamchainz/django-cors-headers#configuration
 
 CORS_ALLOW_ALL_ORIGINS = DEBUG
-
-
-# Django Maintenance Mode
-# https://github.com/fabiocaccamo/django-maintenance-mode#configuration-optional
-
-MAINTENANCE_MODE = config('MAINTENANCE_MODE', cast=bool)
-
-# if True admin site will not be affected by the maintenance-mode page
-MAINTENANCE_MODE_IGNORE_ADMIN_SITE = True
-
-# if True the staff will not see the maintenance-mode page
-MAINTENANCE_MODE_IGNORE_STAFF = True
-
-# the value in seconds of the Retry-After header during maintenance-mode
-MAINTENANCE_MODE_RETRY_AFTER = 3600  # 1 hour

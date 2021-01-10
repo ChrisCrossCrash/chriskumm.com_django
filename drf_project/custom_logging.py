@@ -1,6 +1,3 @@
-import logging
-from django.conf import settings
-
 CUSTOM_LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -10,9 +7,6 @@ CUSTOM_LOGGING = {
         },
         'require_debug_true': {
             '()': 'django.utils.log.RequireDebugTrue',
-        },
-        'require_not_maintenance_mode_503': {
-            '()': 'drf_project.custom_logging.RequireNotMaintenanceMode503',
         },
     },
     'formatters': {
@@ -37,7 +31,6 @@ CUSTOM_LOGGING = {
             'level': 'ERROR',
             'filters': [
                 'require_debug_false',
-                'require_not_maintenance_mode_503',
             ],
             'class': 'django.utils.log.AdminEmailHandler'
         },
@@ -58,10 +51,3 @@ CUSTOM_LOGGING = {
         }
     }
 }
-
-
-class RequireNotMaintenanceMode503(logging.Filter):
-    """Filters out 503 errors if maintenance mode is activated."""
-    def filter(self, record):
-        """Return False if maintenance mode is on and the given record has a status code of 503."""
-        return not (settings.MAINTENANCE_MODE and getattr(record, 'status_code', None) == 503)
