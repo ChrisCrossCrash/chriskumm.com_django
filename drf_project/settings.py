@@ -25,8 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # Site Name (used in admin page header, and available for other things)
-# TODO: Give a name to your site.
-SITE_NAME = "My Awesome Site"
+SITE_NAME = "Chris Kumm Web Designs"
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('SECRET_KEY')

@@ -83,22 +83,15 @@ class CoreUser(AbstractUser):
     objects = CoreUserManager()
 
 
-class Topping(models.Model):
-    # TODO: Delete this pizza topping model.
+class Inquiry(models.Model):
     name = models.CharField(max_length=50)
+    email = models.EmailField()
+    message = models.TextField()
+    submission_date = models.DateTimeField(auto_now_add=True)
+    notes = models.TextField()
+
+    class Meta:
+        verbose_name_plural = 'Inquiries'
 
     def __str__(self):
-        return self.name
-
-
-class Pizza(models.Model):
-    # TODO: Delete this pizza model.
-    name = models.CharField(max_length=50)
-    price = models.DecimalField(decimal_places=2, max_digits=5)
-    toppings = models.ManyToManyField(Topping)
-
-    def get_topping_count(self):
-        return self.toppings.count()
-
-    def __str__(self):
-        return self.name
+        return self.email

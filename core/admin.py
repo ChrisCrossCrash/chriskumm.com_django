@@ -4,7 +4,7 @@ from django.contrib.auth.admin import Group, UserAdmin, GroupAdmin
 
 from admin_interface.admin import Theme, ThemeAdmin
 
-from .models import CoreUser, Pizza, Topping
+from .models import CoreUser, Inquiry
 
 
 class CoreAdminSite(admin.AdminSite):
@@ -49,7 +49,4 @@ class CoreUserAdmin(UserAdmin):
 
 core_admin_site.register(Group, GroupAdmin)
 core_admin_site.register(Theme, ThemeAdmin)
-
-# TODO: Delete these admin pizza placeholders.
-core_admin_site.register(Pizza)
-core_admin_site.register(Topping)
+core_admin_site.register(Inquiry)

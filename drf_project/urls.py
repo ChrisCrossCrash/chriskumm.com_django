@@ -14,14 +14,14 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from core.admin import core_admin_site
-from django.urls import path, include
+from core.views import submit_inquiry
+from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', core_admin_site.urls),
-    path('api-auth/', include('rest_framework.urls')),
-    path('', include('core.urls'))
+    path('api/submit-inquiry/', submit_inquiry),
 ]
 
 if settings.DEBUG:
