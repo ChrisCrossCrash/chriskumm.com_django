@@ -9,8 +9,6 @@ from .serializers import InquirySerializer
 def submit_inquiry(request):
     serializer = InquirySerializer(data=request.data)
     if serializer.is_valid():
-
-        # TODO: Actually save the inquiry
-
-        return Response({'success': 'Got it!'}, status=status.HTTP_201_CREATED)
+        serializer.save()
+        return Response({'success': 'message saved'}, status=status.HTTP_201_CREATED)
     return Response({'error': 'bad request'}, status=status.HTTP_400_BAD_REQUEST)
