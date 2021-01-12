@@ -238,3 +238,9 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 # https://github.com/adamchainz/django-cors-headers#configuration
 
 CORS_ALLOW_ALL_ORIGINS = DEBUG
+
+
+# AbuseIPDB API Key
+# https://www.abuseipdb.com/account/api
+
+ABUSEIPDB_API_KEY = config('ABUSEIPDB_API_KEY')
