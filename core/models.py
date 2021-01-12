@@ -88,7 +88,7 @@ class Inquiry(models.Model):
     email = models.EmailField()
     message = models.TextField()
     submission_date = models.DateTimeField(auto_now_add=True)
-    notes = models.TextField()
+    notes = models.TextField(blank=True)
 
     class Meta:
         verbose_name_plural = 'Inquiries'
