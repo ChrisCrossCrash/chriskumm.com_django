@@ -42,8 +42,8 @@ def submit_inquiry(request):
         if ip_is_abusive(request.META['REMOTE_ADDR'], settings.ABUSEIPDB_API_KEY):
             return Response(
                 {'error': 'Your IP has been blocked from sending message because it has been'
-                          'reported to have a high risk of abuse. If you think this is a'
-                          'mistake, try messaging from another network and let me know.'},
+                          ' reported to have a high risk of abuse. If you think this is a'
+                          ' mistake, try messaging from another network and let me know.'},
                 status=status.HTTP_403_FORBIDDEN
             )
 

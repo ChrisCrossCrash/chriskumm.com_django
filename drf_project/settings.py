@@ -240,7 +240,17 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 CORS_ALLOW_ALL_ORIGINS = DEBUG
 
 
+# Anti-Spam and Abuse
+
 # AbuseIPDB API Key
 # https://www.abuseipdb.com/account/api
 
 ABUSEIPDB_API_KEY = config('ABUSEIPDB_API_KEY')
+
+
+# Without setting a max length, a hacker could spam the entire works of William Shakespeare
+# over and over (yes, I tried it). Setting a character limit, along with rate limiting in
+# Nginx helps prevent bad guys from filling the server with garbage messages.
+# Be sure to match this with validation in the front end.
+
+MESSAGE_MAX_LENGTH = 5000

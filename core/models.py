@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser, BaseUserManager
-
+from django.core.validators import MaxLengthValidator
+from django.conf import settings
 
 # There is an excellent guide on how to how to set up a custom User and UserManager here:
 # https://www.fomfus.com/articles/how-to-use-email-as-username-for-django-authentication-removing-the-username
@@ -86,7 +87,10 @@ class CoreUser(AbstractUser):
 class Inquiry(models.Model):
     name = models.CharField(max_length=50)
     email = models.EmailField()
-    message = models.TextField()
+    message = models.TextField(
+        max_length=settings.MESSAGE_MAX_LENGTH,
+        validators=[MaxLengthValidator(settings.MESSAGE_MAX_LENGTH)]
+    )
     submission_date = models.DateTimeField(auto_now_add=True)
     notes = models.TextField(blank=True)
 
