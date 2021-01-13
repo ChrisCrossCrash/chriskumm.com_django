@@ -2,6 +2,7 @@ import requests
 import json
 
 from django.conf import settings
+from django.core.mail import mail_managers
 
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
@@ -48,5 +49,11 @@ def submit_inquiry(request):
             )
 
         serializer.save()
+
+        mail_managers(
+            f'ChrisKumm.com: message from {serializer.validated_data["email"]}',
+            serializer.validated_data['message']
+        )
+
         return Response({'success': 'message saved'}, status=status.HTTP_201_CREATED)
     return Response({'error': 'bad request'}, status=status.HTTP_400_BAD_REQUEST)
