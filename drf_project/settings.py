@@ -176,11 +176,12 @@ if not DEBUG:
 
 # Email
 # https://docs.djangoproject.com/en/3.1/topics/email/#email-backends
-# EMAIL_HOST = 'email-smtp.us-east-2.amazonaws.com'
-# EMAIL_PORT = 587
-# EMAIL_HOST_USER = config('EMAIL_HOST_USER')
-# EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
-# EMAIL_USE_TLS = True
+
+EMAIL_HOST = config('EMAIL_HOST')
+EMAIL_PORT = 587
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_USE_TLS = True
 
 # default SERVER_EMAIL is root@localhost
 SERVER_EMAIL = f'django@{config("DOMAIN_NAME")}'
