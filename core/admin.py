@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.conf import settings
 from django.contrib.auth.admin import Group, UserAdmin, GroupAdmin
+from django.utils.safestring import mark_safe
 
 from admin_interface.admin import Theme, ThemeAdmin
 
@@ -47,6 +48,20 @@ class CoreUserAdmin(UserAdmin):
     ordering = ('email',)
 
 
+@admin.register(Inquiry, site=core_admin_site)
+class InquiryAdmin(admin.ModelAdmin):
+    list_display = ('__str__', 'email', 'submission_date')
+    fields = ('name', 'email', 'submission_date', 'message', 'ip_link', 'notes')
+    readonly_fields = ('name', 'email', 'submission_date', 'message', 'ip_link')
+
+    def ip_link(self, instance):
+        ip = instance.ip_address
+        return mark_safe(f'<a href="https://www.abuseipdb.com/check/{ip}" rel="noreferrer" target="_blank">{ip}</a>')
+    ip_link.short_description = 'IP address'
+
+    def has_add_permission(self, request):
+        return False
+
+
 core_admin_site.register(Group, GroupAdmin)
 core_admin_site.register(Theme, ThemeAdmin)
-core_admin_site.register(Inquiry)

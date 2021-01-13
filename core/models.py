@@ -93,6 +93,7 @@ class Inquiry(models.Model):
     )
     submission_date = models.DateTimeField(auto_now_add=True)
     notes = models.TextField(blank=True)
+    ip_address = models.GenericIPAddressField()
 
     class Meta:
         verbose_name_plural = 'Inquiries'

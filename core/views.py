@@ -13,7 +13,7 @@ from .serializers import InquirySerializer
 
 
 def ip_is_abusive(ip_addr, api_key, threshold=90):
-    """Checks if the given IP has an abuse confidence score greater than the given threshold percentage."""
+    """Check if the given IP has an abuse confidence score greater than the given threshold percentage."""
 
     # The AbuseIPDB API endpoint
     url = 'https://api.abuseipdb.com/api/v2/check'
@@ -36,6 +36,7 @@ def ip_is_abusive(ip_addr, api_key, threshold=90):
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def submit_inquiry(request):
+    """Process messages sent from the front end form."""
     serializer = InquirySerializer(data=request.data)
     if serializer.is_valid():
 
@@ -48,7 +49,7 @@ def submit_inquiry(request):
                 status=status.HTTP_403_FORBIDDEN
             )
 
-        serializer.save()
+        serializer.save(ip_address=request.META['REMOTE_ADDR'])
 
         mail_managers(
             f'ChrisKumm.com: message from {serializer.validated_data["email"]}',
