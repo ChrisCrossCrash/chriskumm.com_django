@@ -62,6 +62,7 @@ INSTALLED_APPS = [
 
     # This project
     'core.apps.CoreConfig',
+    'art.apps.ArtConfig',
 
     # Third-party
     'rest_framework',
