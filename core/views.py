@@ -12,7 +12,7 @@ from rest_framework.permissions import AllowAny
 from .serializers import InquirySerializer
 
 
-def ip_is_abusive(ip_addr, api_key, threshold=90):
+def _ip_is_abusive(ip_addr, api_key, threshold=90):
     """Check if the given IP has an abuse confidence score greater than the given threshold percentage."""
 
     # The AbuseIPDB API endpoint
@@ -41,7 +41,7 @@ def submit_inquiry(request):
     if serializer.is_valid():
 
         # Filter messages from abusive IP addresses
-        if ip_is_abusive(request.META['REMOTE_ADDR'], settings.ABUSEIPDB_API_KEY):
+        if _ip_is_abusive(request.META['REMOTE_ADDR'], settings.ABUSEIPDB_API_KEY):
             return Response(
                 {'error': 'Your IP has been blocked from sending message because it has been'
                           ' reported to have a high risk of abuse. If you think this is a'
