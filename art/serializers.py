@@ -26,6 +26,16 @@ class InstaArtSerializer(serializers.ModelSerializer):
     location = LocationSerializer()
     styles = StyleSerializer(many=True)
 
+    @staticmethod
+    def get_image_info(obj):
+        return {
+            'url': obj.image.url,
+            'height': obj.image.height,
+            'width': obj.image.width,
+        }
+
+    image = serializers.SerializerMethodField('get_image_info')
+
     class Meta:
         model = Piece
         fields = [
