@@ -6,10 +6,10 @@ from . import views
 app_name = 'art'
 
 urlpatterns = [
-    path('', views.InstaArt.as_view()),
-    path('artist/<int:pk>/', views.ArtistView.as_view()),
-    path('location/<int:pk>/', views.LocationView.as_view()),
-    path('style/<int:pk>/', views.StyleView.as_view()),
+    path('', views.InstaArt.as_view(), name='home'),
+    path('artist/<int:pk>/', views.ArtistView.as_view(), name='artist'),
+    path('location/<int:pk>/', views.LocationView.as_view(), name='location'),
+    path('style/<int:pk>/', views.StyleView.as_view(), name='style'),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns, allowed=['json', 'html'])
