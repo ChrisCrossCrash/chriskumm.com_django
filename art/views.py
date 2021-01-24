@@ -39,4 +39,4 @@ class PiecesByStyleList(ListAPIView):
 
     def get_queryset(self):
         pk = self.kwargs['pk']
-        return Piece.objects.filter(style=pk)
+        return Piece.objects.filter(styles=pk)
