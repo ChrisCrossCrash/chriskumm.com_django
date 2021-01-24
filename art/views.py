@@ -1,42 +1,42 @@
-from django.shortcuts import get_list_or_404
-from rest_framework.response import Response
-from rest_framework.views import APIView
+from rest_framework.pagination import PageNumberPagination
+from rest_framework.generics import ListAPIView
 
 from .models import Piece
 from .serializers import InstaArtSerializer
 
 
-class InstaArt(APIView):
-    # noinspection PyUnusedLocal
-    @staticmethod
-    def get(request, format=None):
-        pieces = Piece.objects.all()
-        serializer = InstaArtSerializer(pieces, many=True)
-        return Response(serializer.data)
+class ArtPaginationClass(PageNumberPagination):
+    page_size = 2
 
 
-class ArtistView(APIView):
-    # noinspection PyUnusedLocal
-    @staticmethod
-    def get(request, pk, format=None):
-        pieces = get_list_or_404(Piece, artist=pk)
-        serializer = InstaArtSerializer(pieces, many=True)
-        return Response(serializer.data)
+class PieceList(ListAPIView):
+    queryset = Piece.objects.all()
+    serializer_class = InstaArtSerializer
+    pagination_class = ArtPaginationClass
 
 
-class LocationView(APIView):
-    # noinspection PyUnusedLocal
-    @staticmethod
-    def get(request, pk, format=None):
-        pieces = get_list_or_404(Piece, location=pk)
-        serializer = InstaArtSerializer(pieces, many=True)
-        return Response(serializer.data)
+class PiecesByArtistList(ListAPIView):
+    serializer_class = InstaArtSerializer
+    pagination_class = ArtPaginationClass
+
+    def get_queryset(self):
+        pk = self.kwargs['pk']
+        return Piece.objects.filter(artist=pk)
 
 
-class StyleView(APIView):
-    # noinspection PyUnusedLocal
-    @staticmethod
-    def get(request, pk, format=None):
-        pieces = get_list_or_404(Piece, styles=pk)
-        serializer = InstaArtSerializer(pieces, many=True)
-        return Response(serializer.data)
+class PiecesByLocationList(ListAPIView):
+    serializer_class = InstaArtSerializer
+    pagination_class = ArtPaginationClass
+
+    def get_queryset(self):
+        pk = self.kwargs['pk']
+        return Piece.objects.filter(location=pk)
+
+
+class PiecesByStyleList(ListAPIView):
+    serializer_class = InstaArtSerializer
+    pagination_class = ArtPaginationClass
+
+    def get_queryset(self):
+        pk = self.kwargs['pk']
+        return Piece.objects.filter(style=pk)
