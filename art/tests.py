@@ -18,6 +18,7 @@ class ArtAPITestCase(APITestCase):
             title='Happy Trees',
             artist=artist,
             location=location,
+            # TODO: Fix this test by including an image with the test piece.
         )
         piece.styles.add(style)
 
