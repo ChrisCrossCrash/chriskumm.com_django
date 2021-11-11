@@ -37,6 +37,11 @@ ALLOWED_HOSTS = [
     '.chriskumm.com'
 ]
 
+CORS_ALLOWED_ORIGINS = [
+    'https://www.chriskumm.com',
+    'https://chriskumm-com-nextjs.vercel.app/',
+]
+
 if DEBUG:
     ALLOWED_HOSTS.extend([
         '127.0.0.1',
