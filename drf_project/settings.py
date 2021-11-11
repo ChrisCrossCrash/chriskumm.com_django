@@ -236,10 +236,24 @@ CKEDITOR_CONFIGS = {
 }
 
 
-# This is required for Django Admin Interface to work properly.
-# https://github.com/ChrisCrossCrash/django-admin-interface#installation
+# This must be specified, or else a warning will be triggered (as of Django 3.2):
+# https://docs.djangoproject.com/en/3.2/releases/3.2/#customizing-type-of-auto-created-primary-keys
 
+DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
+
+
+# This is required for Django Admin Interface to work properly.
+# https://github.com/fabiocaccamo/django-admin-interface#installation
+
+# This just means that the site can only be shown in a frame if the site where
+# it's being rendered is also on https://api.chriskumm.com
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
+# https://docs.djangoproject.com/en/3.2/ref/settings/#x-frame-options
 X_FRAME_OPTIONS = 'SAMEORIGIN'
+# This just tells not to output warnings to the console
+# about the X_FRAMES_OPTIONS not being set to 'DENY'
+# https://docs.djangoproject.com/en/3.2/ref/checks/#security
+SILENCED_SYSTEM_CHECKS = ['security.W019']
 
 
 # Django CORS Headers
