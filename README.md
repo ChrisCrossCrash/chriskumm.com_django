@@ -4,7 +4,7 @@ A simple Django back end for my portfolio site.
 
 ## Features
 
-- InstaArt API: REST API for [InstaArt](https://www.chriskumm.com/art)
+- InstaArt API: REST API for [InstaArt](https://api.chriskumm.com/art)
 - `api/submit-inquiry/` endpoint for POSTing contact forms from the front end.
 - Admin page: A dashboard for managing everything in the database (inquiries, and InstaArt objects)
 

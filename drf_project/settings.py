@@ -34,7 +34,8 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', cast=bool)
 
 ALLOWED_HOSTS = [
-    f'.{config("DOMAIN_NAME")}',
+    'https://chriskumm.com'
+    'https://www.chriskumm.com',
 ]
 
 if DEBUG:
@@ -185,7 +186,7 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
 
 # default SERVER_EMAIL is root@localhost
-SERVER_EMAIL = f'django@{config("DOMAIN_NAME")}'
+SERVER_EMAIL = f'django@chriskumm.com'
 
 # By default, admins are sent error emails when DEBUG is False
 ADMINS = [
