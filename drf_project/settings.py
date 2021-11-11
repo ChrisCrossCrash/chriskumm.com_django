@@ -40,6 +40,7 @@ ALLOWED_HOSTS = [
 CORS_ALLOWED_ORIGINS = [
     'https://www.chriskumm.com',
     'https://chriskumm-com-nextjs.vercel.app',
+    'https://insta-art-frontend.vercel.app/'
 ]
 
 if DEBUG:
