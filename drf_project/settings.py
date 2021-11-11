@@ -34,9 +34,7 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', cast=bool)
 
 ALLOWED_HOSTS = [
-    'https://chriskumm.com'
-    'https://www.chriskumm.com',
-    'https://api.chriskumm.com'
+    '.chriskumm.com'
 ]
 
 if DEBUG:
