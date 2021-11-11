@@ -36,6 +36,7 @@ DEBUG = config('DEBUG', cast=bool)
 ALLOWED_HOSTS = [
     'https://chriskumm.com'
     'https://www.chriskumm.com',
+    'https://api.chriskumm.com'
 ]
 
 if DEBUG:
