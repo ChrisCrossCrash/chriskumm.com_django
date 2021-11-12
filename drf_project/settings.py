@@ -28,98 +28,94 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SITE_NAME = "Chris Kumm Web Designs"
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', cast=bool)
+DEBUG = config("DEBUG", cast=bool)
 
-ALLOWED_HOSTS = [
-    '.chriskumm.com'
-]
+ALLOWED_HOSTS = [".chriskumm.com"]
 
 CORS_ALLOWED_ORIGINS = [
-    'https://www.chriskumm.com',
-    'https://chriskumm-com-nextjs.vercel.app',
-    'https://insta-art-frontend.vercel.app'
+    "https://www.chriskumm.com",
+    "https://chriskumm-com-nextjs.vercel.app",
+    "https://insta-art-frontend.vercel.app",
 ]
 
 if DEBUG:
-    ALLOWED_HOSTS.extend([
-        '127.0.0.1',
-        'localhost',
-        'testserver',
-    ])
+    ALLOWED_HOSTS.extend(
+        [
+            "127.0.0.1",
+            "localhost",
+            "testserver",
+        ]
+    )
 
 
 # Application definition
 
 INSTALLED_APPS = [
     # Django Admin Interface
-    'admin_interface',
-    'colorfield',
-
+    "admin_interface",
+    "colorfield",
     # Default
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
     # This project
-    'core.apps.CoreConfig',
-    'art.apps.ArtConfig',
-
+    "core.apps.CoreConfig",
+    "art.apps.ArtConfig",
     # Third-party
-    'rest_framework',
-    'corsheaders',
-    'ckeditor',
+    "rest_framework",
+    "corsheaders",
+    "ckeditor",
 ]
 
 MIDDLEWARE = [
     # For Django CORS Headers
-    'corsheaders.middleware.CorsMiddleware',
-
+    "corsheaders.middleware.CorsMiddleware",
     # Default
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django.middleware.security.SecurityMiddleware",
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = 'drf_project.urls'
+ROOT_URLCONF = "drf_project.urls"
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            BASE_DIR / 'templates',
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [
+            BASE_DIR / "templates",
         ],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.debug",
+                "django.template.context_processors.request",
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
             ],
         },
     },
 ]
 
-WSGI_APPLICATION = 'drf_project.wsgi.application'
+WSGI_APPLICATION = "drf_project.wsgi.application"
 
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
 
@@ -127,7 +123,7 @@ DATABASES = {
 # Override the default User model
 # https://docs.djangoproject.com/en/3.1/topics/auth/customizing/#using-a-custom-user-model-when-starting-a-project
 
-AUTH_USER_MODEL = 'core.CoreUser'
+AUTH_USER_MODEL = "core.CoreUser"
 
 
 # Password validation
@@ -135,16 +131,16 @@ AUTH_USER_MODEL = 'core.CoreUser'
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
 
@@ -152,9 +148,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = config('TIME_ZONE')
+TIME_ZONE = config("TIME_ZONE")
 
 USE_I18N = False
 
@@ -166,11 +162,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/django/'
-STATIC_ROOT = BASE_DIR / 'static/'
+STATIC_URL = "/static/django/"
+STATIC_ROOT = BASE_DIR / "static/"
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
 
 
 # HTTPS Settings
@@ -184,26 +180,26 @@ if not DEBUG:
 # Email
 # https://docs.djangoproject.com/en/3.1/topics/email/#email-backends
 
-EMAIL_HOST = config('EMAIL_HOST')
+EMAIL_HOST = config("EMAIL_HOST")
 EMAIL_PORT = 587
-EMAIL_HOST_USER = config('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_HOST_USER = config("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD")
 EMAIL_USE_TLS = True
 
 # default SERVER_EMAIL is root@localhost
-SERVER_EMAIL = f'django@chriskumm.com'
+SERVER_EMAIL = f"django@chriskumm.com"
 
 # By default, admins are sent error emails when DEBUG is False
 ADMINS = [
-    ('Chris', 'chrislkumm@protonmail.com'),
+    ("Chris", "chrislkumm@protonmail.com"),
 ]
 
 MANAGERS = [
-    ('Chris', 'chrislkumm@protonmail.com'),
+    ("Chris", "chrislkumm@protonmail.com"),
 ]
 
 if DEBUG:
-    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 
 # Logging
@@ -220,18 +216,28 @@ logging.config.dictConfig(CUSTOM_LOGGING)
 # https://django-ckeditor.readthedocs.io/en/latest/#optional-customizing-ckeditor-editor
 
 CKEDITOR_CONFIGS = {
-    'default': {
-        'toolbar': 'Custom',
-        'toolbar_Custom': [
-            ['Format'],
-            ['Bold', 'Italic', 'Underline'],
-            ['TextColor', 'BGColor'],
-            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight'],
-            ['Link', 'Unlink'],
-            ['Image', 'Table', 'SpecialChar', 'HorizontalRule'],
-            ['Scayt'],
-            ['RemoveFormat', 'Source']
-        ]
+    "default": {
+        "toolbar": "Custom",
+        "toolbar_Custom": [
+            ["Format"],
+            ["Bold", "Italic", "Underline"],
+            ["TextColor", "BGColor"],
+            [
+                "NumberedList",
+                "BulletedList",
+                "-",
+                "Outdent",
+                "Indent",
+                "-",
+                "JustifyLeft",
+                "JustifyCenter",
+                "JustifyRight",
+            ],
+            ["Link", "Unlink"],
+            ["Image", "Table", "SpecialChar", "HorizontalRule"],
+            ["Scayt"],
+            ["RemoveFormat", "Source"],
+        ],
     }
 }
 
@@ -249,11 +255,11 @@ DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 # it's being rendered is also on https://api.chriskumm.com
 # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
 # https://docs.djangoproject.com/en/3.2/ref/settings/#x-frame-options
-X_FRAME_OPTIONS = 'SAMEORIGIN'
+X_FRAME_OPTIONS = "SAMEORIGIN"
 # This just tells not to output warnings to the console
 # about the X_FRAMES_OPTIONS not being set to 'DENY'
 # https://docs.djangoproject.com/en/3.2/ref/checks/#security
-SILENCED_SYSTEM_CHECKS = ['security.W019']
+SILENCED_SYSTEM_CHECKS = ["security.W019"]
 
 
 # Django CORS Headers
@@ -267,7 +273,7 @@ CORS_ALLOW_ALL_ORIGINS = DEBUG
 # AbuseIPDB API Key
 # https://www.abuseipdb.com/account/api
 
-ABUSEIPDB_API_KEY = config('ABUSEIPDB_API_KEY')
+ABUSEIPDB_API_KEY = config("ABUSEIPDB_API_KEY")
 
 
 # Without setting a max length, a hacker could spam the entire works of William Shakespeare

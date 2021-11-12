@@ -39,10 +39,10 @@ class Piece(models.Model):
     wiki_url = models.URLField(blank=True)
     # ImageFields require 'Pillow' to be installed
     # A media url is also required in urlpatterns for serving files in development
-    image = models.ImageField(upload_to='art/piece_images/')
+    image = models.ImageField(upload_to="art/piece_images/")
 
     class Meta:
-        ordering = ['-created_date']
+        ordering = ["-created_date"]
 
     def __str__(self):
         return self.title

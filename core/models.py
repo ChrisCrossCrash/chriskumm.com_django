@@ -35,7 +35,7 @@ class CoreUserManager(BaseUserManager):
     def _create_user(self, email, password, **extra_fields):
         """Perform the steps needed to create any kind of User."""
         if not email:
-            raise ValueError('Users must have an email address.')
+            raise ValueError("Users must have an email address.")
         user = self.model(email=email, **extra_fields)
         user.set_password(password)
         user.save()
@@ -43,19 +43,19 @@ class CoreUserManager(BaseUserManager):
 
     def create_user(self, email, password=None, **extra_fields):
         """Perform the unique steps needed to create a normal user."""
-        extra_fields.setdefault('is_staff', False)
-        extra_fields.setdefault('is_superuser', False)
+        extra_fields.setdefault("is_staff", False)
+        extra_fields.setdefault("is_superuser", False)
         return self._create_user(email, password, **extra_fields)
 
     def create_superuser(self, email, password, **extra_fields):
         """Perform the unique steps needed to create a superuser."""
-        extra_fields.setdefault('is_staff', True)
-        extra_fields.setdefault('is_superuser', True)
+        extra_fields.setdefault("is_staff", True)
+        extra_fields.setdefault("is_superuser", True)
 
-        if extra_fields.get('is_staff') is not True:
-            raise ValueError('Superuser must have is_staff=True.')
-        if extra_fields.get('is_superuser') is not True:
-            raise ValueError('Superuser must have is_superuser=True.')
+        if extra_fields.get("is_staff") is not True:
+            raise ValueError("Superuser must have is_staff=True.")
+        if extra_fields.get("is_superuser") is not True:
+            raise ValueError("Superuser must have is_superuser=True.")
 
         return self._create_user(email, password, **extra_fields)
 
@@ -73,9 +73,9 @@ class CoreUser(AbstractUser):
     last_name = None
 
     # The email field should be required and unique (unlike default).
-    email = LowercaseEmailField('email address', unique=True)
+    email = LowercaseEmailField("email address", unique=True)
 
-    USERNAME_FIELD = 'email'
+    USERNAME_FIELD = "email"
 
     # Email is automatically required, since it is the USERNAME_FIELD.
     REQUIRED_FIELDS = []
@@ -89,14 +89,14 @@ class Inquiry(models.Model):
     email = models.EmailField()
     message = models.TextField(
         max_length=settings.MESSAGE_MAX_LENGTH,
-        validators=[MaxLengthValidator(settings.MESSAGE_MAX_LENGTH)]
+        validators=[MaxLengthValidator(settings.MESSAGE_MAX_LENGTH)],
     )
     submission_date = models.DateTimeField(auto_now_add=True)
     notes = models.TextField(blank=True)
     ip_address = models.GenericIPAddressField()
 
     class Meta:
-        verbose_name_plural = 'Inquiries'
+        verbose_name_plural = "Inquiries"
 
     def __str__(self):
         return self.email

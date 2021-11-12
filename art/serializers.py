@@ -6,19 +6,19 @@ from rest_framework import serializers
 class ArtistSerializer(serializers.ModelSerializer):
     class Meta:
         model = Artist
-        fields = ['name', 'pk']
+        fields = ["name", "pk"]
 
 
 class LocationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Location
-        fields = ['name', 'pk']
+        fields = ["name", "pk"]
 
 
 class StyleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Style
-        fields = ['name', 'pk']
+        fields = ["name", "pk"]
 
 
 class InstaArtSerializer(serializers.ModelSerializer):
@@ -29,21 +29,21 @@ class InstaArtSerializer(serializers.ModelSerializer):
     @staticmethod
     def get_image_info(obj):
         return {
-            'url': obj.image.url,
-            'height': obj.image.height,
-            'width': obj.image.width,
+            "url": obj.image.url,
+            "height": obj.image.height,
+            "width": obj.image.width,
         }
 
-    image = serializers.SerializerMethodField('get_image_info')
+    image = serializers.SerializerMethodField("get_image_info")
 
     class Meta:
         model = Piece
         fields = [
-            'title',
-            'artist',
-            'location',
-            'styles',
-            'description',
-            'wiki_url',
-            'image',
+            "title",
+            "artist",
+            "location",
+            "styles",
+            "description",
+            "wiki_url",
+            "image",
         ]

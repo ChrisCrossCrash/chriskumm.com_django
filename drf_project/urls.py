@@ -5,9 +5,9 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin/', core_admin_site.urls),
-    path('api/submit-inquiry/', submit_inquiry),
-    path('api/art/', include('art.urls')),
+    path("admin/", core_admin_site.urls),
+    path("api/submit-inquiry/", submit_inquiry),
+    path("api/art/", include("art.urls")),
 ]
 
 if settings.DEBUG:

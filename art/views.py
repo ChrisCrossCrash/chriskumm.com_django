@@ -20,7 +20,7 @@ class PiecesByArtistList(ListAPIView):
     pagination_class = ArtPaginationClass
 
     def get_queryset(self):
-        pk = self.kwargs['pk']
+        pk = self.kwargs["pk"]
         return Piece.objects.filter(artist=pk)
 
 
@@ -29,7 +29,7 @@ class PiecesByLocationList(ListAPIView):
     pagination_class = ArtPaginationClass
 
     def get_queryset(self):
-        pk = self.kwargs['pk']
+        pk = self.kwargs["pk"]
         return Piece.objects.filter(location=pk)
 
 
@@ -38,5 +38,5 @@ class PiecesByStyleList(ListAPIView):
     pagination_class = ArtPaginationClass
 
     def get_queryset(self):
-        pk = self.kwargs['pk']
+        pk = self.kwargs["pk"]
         return Piece.objects.filter(styles=pk)

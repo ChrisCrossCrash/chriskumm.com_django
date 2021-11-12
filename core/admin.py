@@ -14,8 +14,9 @@ class CoreAdminSite(admin.AdminSite):
     Django docs:
     https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#adminsite-objects
     """
-    site_header = f'{settings.SITE_NAME} Admin Panel'
-    site_title = f'{settings.SITE_NAME} Admin Panel'
+
+    site_header = f"{settings.SITE_NAME} Admin Panel"
+    site_title = f"{settings.SITE_NAME} Admin Panel"
 
 
 core_admin_site = CoreAdminSite()
@@ -31,33 +32,48 @@ class CoreUserAdmin(UserAdmin):
     """
 
     fieldsets = (
-        (None, {'fields': ('email', 'password')}),
-        ('Permissions', {
-            'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions')
-        }),
-        ('Important dates', {'fields': ('last_login', 'date_joined')}),
+        (None, {"fields": ("email", "password")}),
+        (
+            "Permissions",
+            {
+                "fields": (
+                    "is_active",
+                    "is_staff",
+                    "is_superuser",
+                    "groups",
+                    "user_permissions",
+                )
+            },
+        ),
+        ("Important dates", {"fields": ("last_login", "date_joined")}),
     )
     add_fieldsets = (
-        (None, {
-            'classes': ('wide',),
-            'fields': ('email', 'password1', 'password2'),
-        }),
+        (
+            None,
+            {
+                "classes": ("wide",),
+                "fields": ("email", "password1", "password2"),
+            },
+        ),
     )
-    list_display = ('email', 'is_staff')
-    search_fields = ('email',)
-    ordering = ('email',)
+    list_display = ("email", "is_staff")
+    search_fields = ("email",)
+    ordering = ("email",)
 
 
 @admin.register(Inquiry, site=core_admin_site)
 class InquiryAdmin(admin.ModelAdmin):
-    list_display = ('__str__', 'email', 'submission_date')
-    fields = ('name', 'email', 'submission_date', 'message', 'ip_link', 'notes')
-    readonly_fields = ('name', 'email', 'submission_date', 'message', 'ip_link')
+    list_display = ("__str__", "email", "submission_date")
+    fields = ("name", "email", "submission_date", "message", "ip_link", "notes")
+    readonly_fields = ("name", "email", "submission_date", "message", "ip_link")
 
     def ip_link(self, instance):
         ip = instance.ip_address
-        return mark_safe(f'<a href="https://www.abuseipdb.com/check/{ip}" rel="noreferrer" target="_blank">{ip}</a>')
-    ip_link.short_description = 'IP address'
+        return mark_safe(
+            f'<a href="https://www.abuseipdb.com/check/{ip}" rel="noreferrer" target="_blank">{ip}</a>'
+        )
+
+    ip_link.short_description = "IP address"
 
     def has_add_permission(self, request):
         return False
