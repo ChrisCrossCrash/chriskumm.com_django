@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "batisteo.vscode-django",
+    "tamasfe.even-better-toml",
+    "gruntfuggly.todo-tree",
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "yzhang.markdown-all-in-one",
+    "magicstack.magicpython",
+    "ecmel.vscode-html-css"
+  ]
+}
