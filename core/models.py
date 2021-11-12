@@ -82,21 +82,3 @@ class CoreUser(AbstractUser):
 
     # Set the custom user manager
     objects = CoreUserManager()
-
-
-class Inquiry(models.Model):
-    name = models.CharField(max_length=50)
-    email = models.EmailField()
-    message = models.TextField(
-        max_length=settings.MESSAGE_MAX_LENGTH,
-        validators=[MaxLengthValidator(settings.MESSAGE_MAX_LENGTH)],
-    )
-    submission_date = models.DateTimeField(auto_now_add=True)
-    notes = models.TextField(blank=True)
-    ip_address = models.GenericIPAddressField()
-
-    class Meta:
-        verbose_name_plural = "Inquiries"
-
-    def __str__(self):
-        return self.email
