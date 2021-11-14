@@ -7,7 +7,7 @@ app_name = "art"
 
 urlpatterns = [
     path("", views.PieceList.as_view(), name="home"),
-    path("all-pieces/", views.AllPieceList.as_view(), name="all-pieces"),
+    path("all-pieces/", views.AllPieceList.as_view(), name="all_pieces"),
     path("artist/<int:pk>/", views.PiecesByArtistList.as_view(), name="artist"),
     path("artist/", views.ArtistList.as_view(), name="artist_list"),
     path("location/<int:pk>/", views.PiecesByLocationList.as_view(), name="location"),
