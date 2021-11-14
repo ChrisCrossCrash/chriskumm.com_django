@@ -14,6 +14,10 @@ A simple Django back end for my portfolio site.
 - [Django Admin Interface](https://github.com/fabiocaccamo/django-admin-interface)
 - [Django CKEditor](https://github.com/django-ckeditor/django-ckeditor)
 - [Python Decuple](https://github.com/henriquebastos/python-decouple/)
+- [Pillow](https://pillow.readthedocs.io/en/stable/)
+- [Requests](https://2.python-requests.org/en/master/)
+- [Black](https://black.readthedocs.io/en/stable/)
+- [Pre-Commit](https://pre-commit.com/)
 
 ## Environment Variables
 You'll need to create a file named `.env` in the root directory of this project and populate it with the following environment variables:
@@ -37,6 +41,14 @@ EMAIL_HOST_PASSWORD=
 EMAIL_HOST=
 
 ```
+
+## Text Fixtures
+
+Apps may contain a `fixtures/` directory, which contains its test fixtures.
+
+Additionally, there is a `media/fixture/` directory which contains the media files for the fixtures. This directory is not ignored by Git.
+
+To use the fixtures, simply run `python manage.py testserver [fixture [fixture ...]]`. This command loads the fixtures as test data which can be safely modified on the test server.
 
 ## Known Issues
 
