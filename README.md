@@ -37,3 +37,21 @@ EMAIL_HOST_PASSWORD=
 EMAIL_HOST=
 
 ```
+
+## Known Issues
+
+### `dumpdata` in Windows
+
+Using `python manage.py dumpdata -o somefile.json` in Windows (or at least PowerShell) will result in the following error:
+
+```
+(venv) PS C:\...\chriskumm.com_django> python .\manage.py dumpdata art | out-file -encoding UTF8 -noNewLine art_standard.json
+CommandError: Unable to serialize database: 'charmap' codec can't encode character '\u02cc' in position 132: character maps to <undefined>
+Exception ignored in: <generator object cursor_iter at 0x000001371B9280B0>
+Traceback (most recent call last):
+  File "C:\...\chriskumm.com_django\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1649, in cursor_iter
+    cursor.close()
+sqlite3.ProgrammingError: Cannot operate on a closed database.
+```
+
+One way to get around this is by running the command from a virtual environment in WSL (Windows Subsystem for Linux).
