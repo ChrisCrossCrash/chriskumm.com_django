@@ -1,0 +1,197 @@
+[
+  {
+    "model": "art.artist",
+    "pk": 1,
+    "fields": {
+      "name": "Vincent van Gogh",
+      "biography": "<p><strong>Vincent Willem van Gogh</strong> (30 March 1853&nbsp;&ndash; 29 July 1890) was a Dutch <a href=\"https://en.wikipedia.org/wiki/Post-Impressionism\" title=\"Post-Impressionism\">Post-Impressionist</a> painter who posthumously became one of the most famous and influential figures in <a class=\"mw-redirect\" href=\"https://en.wikipedia.org/wiki/Western_art\" title=\"Western art\">Western art</a> history. In a decade, he created about 2,100 artworks, including around 860 <a href=\"https://en.wikipedia.org/wiki/Oil_painting\" title=\"\">oil paintings</a>, most of which date from the last two years of his life. They include <a class=\"mw-redirect\" href=\"https://en.wikipedia.org/wiki/Trees_and_Undergrowth_(Van_Gogh_series)\" title=\"Trees and Undergrowth (Van Gogh series)\">landscapes</a>, <a href=\"https://en.wikipedia.org/wiki/Still_life_paintings_by_Vincent_van_Gogh_(Paris)\" title=\"Still life paintings by Vincent van Gogh (Paris)\">still lifes</a>, <a href=\"https://en.wikipedia.org/wiki/Portraits_by_Vincent_van_Gogh\" title=\"Portraits by Vincent van Gogh\">portraits</a> and <a href=\"https://en.wikipedia.org/wiki/Portraits_of_Vincent_van_Gogh\" title=\"Portraits of Vincent van Gogh\">self-portraits</a>, and are characterised by bold colours and dramatic, impulsive and expressive <a class=\"mw-redirect\" href=\"https://en.wikipedia.org/wiki/Paintwork\" title=\"Paintwork\">brushwork</a> that contributed to the foundations of <a href=\"https://en.wikipedia.org/wiki/Modern_art\" title=\"Modern art\">modern art</a>. Not commercially successful, he struggled with <a class=\"mw-redirect\" href=\"https://en.wikipedia.org/wiki/Severe_depression\" title=\"Severe depression\">severe depression</a> and poverty, eventually leading to his <a href=\"https://en.wikipedia.org/wiki/Suicide\" title=\"Suicide\">suicide</a> at age thirty-seven.</p>\r\n\r\n<p>Source: Wikipedia</p>"
+    }
+  },
+  {
+    "model": "art.artist",
+    "pk": 2,
+    "fields": {
+      "name": "Leonardo da Vinci",
+      "biography": "<p><strong>Leonardo da Vinci</strong> (15 April 1452&nbsp;&ndash;&nbsp;2 May 1519) was an Italian <a href=\"https://en.wikipedia.org/wiki/Polymath\" title=\"Polymath\">polymath</a> of the <a href=\"https://en.wikipedia.org/wiki/High_Renaissance\" title=\"High Renaissance\">High Renaissance</a> who was active as a painter, <a href=\"https://en.wikipedia.org/wiki/Drawing\" title=\"Drawing\">draughtsman</a>, engineer, scientist, theorist, sculptor and architect. While his fame initially rested on his achievements as a painter, he also became known for <a href=\"https://en.wikipedia.org/wiki/Leonardo_da_Vinci#Journals_and_notes\">his notebooks</a>, in which he made drawings and notes on a variety of subjects, including anatomy, astronomy, botany, cartography, painting, and <a href=\"https://en.wikipedia.org/wiki/Paleontology\" title=\"Paleontology\">paleontology</a>. Leonardo&#39;s <a href=\"https://en.wikipedia.org/wiki/Genius\" title=\"Genius\">genius</a> epitomized the <a href=\"https://en.wikipedia.org/wiki/Renaissance_humanism\" title=\"Renaissance humanism\">Renaissance humanist</a> ideal, and his <a href=\"https://en.wikipedia.org/wiki/List_of_works_by_Leonardo_da_Vinci\" title=\"List of works by Leonardo da Vinci\">collective works</a> compose a contribution to later generations of artists matched only by that of his younger contemporary, <a href=\"https://en.wikipedia.org/wiki/Michelangelo\" title=\"Michelangelo\">Michelangelo</a>.</p>"
+    }
+  },
+  {
+    "model": "art.location",
+    "pk": 1,
+    "fields": {
+      "name": "Van Gogh Museum",
+      "city": "Amsterdam",
+      "country": "Netherlands",
+      "web_site_url": "https://www.vangoghmuseum.nl/nl",
+      "description": "<p>The <strong>Van Gogh Museum</strong> is a Dutch <a href=\"https://en.wikipedia.org/wiki/Art_museum\" title=\"Art museum\">art museum</a> dedicated to the works of <a href=\"https://en.wikipedia.org/wiki/Vincent_van_Gogh\" title=\"Vincent van Gogh\">Vincent van Gogh</a> and his contemporaries in the <a href=\"https://en.wikipedia.org/wiki/Museumplein\" title=\"Museumplein\">Museum Square</a> in <a href=\"https://en.wikipedia.org/wiki/Amsterdam-Zuid\" title=\"Amsterdam-Zuid\">Amsterdam South</a>, close to the <a href=\"https://en.wikipedia.org/wiki/Stedelijk_Museum_Amsterdam\" title=\"Stedelijk Museum Amsterdam\">Stedelijk Museum</a>, the <a href=\"https://en.wikipedia.org/wiki/Rijksmuseum\" title=\"Rijksmuseum\">Rijksmuseum</a>, and the <a href=\"https://en.wikipedia.org/wiki/Concertgebouw\" title=\"Concertgebouw\">Concertgebouw</a>.<a href=\"https://en.wikipedia.org/wiki/Van_Gogh_Museum#cite_note-7\">[7]</a> The museum opened on 2 June 1973,<a href=\"https://en.wikipedia.org/wiki/Van_Gogh_Museum#cite_note-dbnl.org-2\">[2]</a> and its buildings were designed by <a href=\"https://en.wikipedia.org/wiki/Gerrit_Rietveld\" title=\"Gerrit Rietveld\">Gerrit Rietveld</a> and <a href=\"https://en.wikipedia.org/wiki/Kisho_Kurokawa\" title=\"Kisho Kurokawa\">Kisho Kurokawa</a>.</p>\r\n\r\n<p>The museum contains the largest collection of Van Gogh&#39;s paintings and drawings in the world. In 2017, the museum had 2.3&nbsp;million visitors and was the <a href=\"https://en.wikipedia.org/wiki/List_of_most_visited_museums_in_the_Netherlands\" title=\"List of most visited museums in the Netherlands\">most-visited museum in the Netherlands</a>, and the <a class=\"mw-redirect\" href=\"https://en.wikipedia.org/wiki/List_of_most_visited_art_museums\" title=\"List of most visited art museums\">23rd-most-visited art museum in the world</a>. In 2019, the Van Gogh Museum launched the <em>Meet Vincent Van Gogh Experience</em>, a technology-driven &quot;immersive exhibition&quot; on Van Gogh&#39;s life and works, which has toured globally.</p>"
+    }
+  },
+  {
+    "model": "art.location",
+    "pk": 2,
+    "fields": {
+      "name": "Louvre",
+      "city": "Paris",
+      "country": "France",
+      "web_site_url": "https://www.louvre.fr",
+      "description": "<p>The <strong>Louvre</strong>, or the <strong>Louvre Museum</strong>, is the world&#39;s <a href=\"https://en.wikipedia.org/wiki/List_of_most-visited_museums\" title=\"List of most-visited museums\">most-visited museum</a> and a historic monument in <a href=\"https://en.wikipedia.org/wiki/Paris\" title=\"Paris\">Paris</a>, <a href=\"https://en.wikipedia.org/wiki/France\" title=\"France\">France</a>. It is the home of many of the most known <a href=\"https://en.wikipedia.org/wiki/Work_of_art\" title=\"Work of art\">work of arts</a>, including the <em><a href=\"https://en.wikipedia.org/wiki/Mona_Lisa\" title=\"Mona Lisa\">Mona Lisa</a></em>. A central landmark of the city, it is located on the <a href=\"https://en.wikipedia.org/wiki/Rive_Droite\" title=\"Rive Droite\">Right Bank</a> of the <a href=\"https://en.wikipedia.org/wiki/Seine\" title=\"Seine\">Seine</a> in the city&#39;s <a href=\"https://en.wikipedia.org/wiki/1st_arrondissement_of_Paris\" title=\"1st arrondissement of Paris\">1st arrondissement</a> (district or ward). Approximately 38,000&nbsp;objects from prehistory to the 21st century are exhibited over an area of 72,735 square meters (782,910 square feet). Due to the <a href=\"https://en.wikipedia.org/wiki/COVID-19_pandemic\" title=\"COVID-19 pandemic\">COVID-19 pandemic</a>, the museum was closed for 150 days in 2020, and attendance plunged by 72 percent to 2.7 million. Nonetheless, the Louvre still topped the <a href=\"https://en.wikipedia.org/wiki/List_of_most-visited_art_museums\" title=\"List of most-visited art museums\">list of most-visited art museums</a> in the world in 2020.</p>"
+    }
+  },
+  {
+    "model": "art.location",
+    "pk": 3,
+    "fields": {
+      "name": "Museum of Modern Art",
+      "city": "New York, NY",
+      "country": "United States of America",
+      "web_site_url": "https://www.moma.org",
+      "description": "<p>The <strong>Museum of Modern Art</strong> (<strong>MoMA</strong>) is an <a href=\"https://en.wikipedia.org/wiki/Art_museum\" title=\"Art museum\">art museum</a> located in <a href=\"https://en.wikipedia.org/wiki/Midtown_Manhattan\" title=\"Midtown Manhattan\">Midtown Manhattan</a>, <a href=\"https://en.wikipedia.org/wiki/New_York_City\" title=\"New York City\">New York City</a>, on <a href=\"https://en.wikipedia.org/wiki/53rd_Street_(Manhattan)\" title=\"53rd Street (Manhattan)\">53rd Street</a> between <a href=\"https://en.wikipedia.org/wiki/Fifth_Avenue\" title=\"Fifth Avenue\">Fifth</a> and <a href=\"https://en.wikipedia.org/wiki/Sixth_Avenue\" title=\"Sixth Avenue\">Sixth Avenues</a>.</p>\r\n\r\n<p>It plays a major role in developing and collecting <a href=\"https://en.wikipedia.org/wiki/Modern_art\" title=\"Modern art\">modern art</a>, and is often identified as one of the <a href=\"https://en.wikipedia.org/wiki/List_of_largest_art_museums\" title=\"List of largest art museums\">largest</a> and most influential museums of modern art in the world. MoMA&#39;s collection offers an overview of modern and <a href=\"https://en.wikipedia.org/wiki/Contemporary_art\" title=\"Contemporary art\">contemporary art</a>, including works of <a href=\"https://en.wikipedia.org/wiki/Architecture\" title=\"Architecture\">architecture</a> and <a href=\"https://en.wikipedia.org/wiki/Design\" title=\"Design\">design</a>, <a href=\"https://en.wikipedia.org/wiki/Drawing\" title=\"Drawing\">drawing</a>, <a href=\"https://en.wikipedia.org/wiki/Painting\" title=\"Painting\">painting</a>, <a href=\"https://en.wikipedia.org/wiki/Sculpture\" title=\"Sculpture\">sculpture</a>, <a href=\"https://en.wikipedia.org/wiki/Photography\" title=\"Photography\">photography</a>, <a href=\"https://en.wikipedia.org/wiki/Screen_printing\" title=\"Screen printing\">prints</a>, <a href=\"https://en.wikipedia.org/wiki/Book_illustration\" title=\"Book illustration\">illustrated</a> books and <a href=\"https://en.wikipedia.org/wiki/Artist%27s_book\" title=\"Artist's book\">artist&#39;s books</a>, <a href=\"https://en.wikipedia.org/wiki/Film\" title=\"Film\">film</a>, and <a href=\"https://en.wikipedia.org/wiki/Electronic_media\" title=\"Electronic media\">electronic media</a>.</p>"
+    }
+  },
+  {
+    "model": "art.location",
+    "pk": 4,
+    "fields": {
+      "name": "Santa Maria delle Grazie",
+      "city": "Milan",
+      "country": "Italy",
+      "web_site_url": "https://cenacolovinciano.org/",
+      "description": "<p><strong>Santa Maria delle Grazie</strong> (&quot;Holy Mary of Grace&quot;) is a <a href=\"https://en.wikipedia.org/wiki/Church_(building)\" title=\"Church (building)\">church</a> and Dominican convent in <a href=\"https://en.wikipedia.org/wiki/Milan\" title=\"Milan\">Milan</a>, northern <a href=\"https://en.wikipedia.org/wiki/Italy\" title=\"Italy\">Italy</a>, and a <a href=\"https://en.wikipedia.org/wiki/UNESCO\" title=\"UNESCO\">UNESCO</a> <a href=\"https://en.wikipedia.org/wiki/World_Heritage_Site\" title=\"World Heritage Site\">World Heritage Site</a>. The church contains the <a href=\"https://en.wikipedia.org/wiki/Mural\" title=\"Mural\">mural</a> of <em><a href=\"https://en.wikipedia.org/wiki/The_Last_Supper_(Leonardo)\" title=\"The Last Supper (Leonardo)\">The Last Supper</a></em> by <a href=\"https://en.wikipedia.org/wiki/Leonardo_da_Vinci\" title=\"Leonardo da Vinci\">Leonardo da Vinci</a>, which is in the <a href=\"https://en.wikipedia.org/wiki/Refectory\" title=\"Refectory\">refectory</a> of the convent.</p>"
+    }
+  },
+  {
+    "model": "art.style",
+    "pk": 1,
+    "fields": {
+      "name": "Post-Impressionism",
+      "description": "<p><strong>Post-Impressionism</strong> (also spelled <strong>Postimpressionism</strong>) is a predominantly French <a href=\"https://en.wikipedia.org/wiki/Art_movement\" title=\"Art movement\">art movement</a> that developed roughly between 1886 and 1905, from the last <a href=\"https://en.wikipedia.org/wiki/Impressionism\" title=\"Impressionism\">Impressionist</a> exhibition to the birth of <a href=\"https://en.wikipedia.org/wiki/Fauvism\" title=\"Fauvism\">Fauvism</a>. Post-Impressionism emerged as a reaction against Impressionists&#39; concern for the naturalistic depiction of light and colour. Due to its broad emphasis on abstract qualities or symbolic content, Post-Impressionism encompasses <a href=\"https://en.wikipedia.org/wiki/Les_Nabis\" title=\"Les Nabis\">Les Nabis</a>, <a href=\"https://en.wikipedia.org/wiki/Neo-Impressionism\" title=\"Neo-Impressionism\">Neo-Impressionism</a>, <a href=\"https://en.wikipedia.org/wiki/Symbolism_(arts)\" title=\"Symbolism (arts)\">Symbolism</a>, <a href=\"https://en.wikipedia.org/wiki/Cloisonnism\" title=\"Cloisonnism\">Cloisonnism</a>, <a href=\"https://en.wikipedia.org/wiki/Pont-Aven_School\" title=\"Pont-Aven School\">Pont-Aven School</a>, as well as <a href=\"https://en.wikipedia.org/wiki/Synthetism\" title=\"Synthetism\">Synthetism</a>, along with some later Impressionists&#39; work. The movement was led by <a href=\"https://en.wikipedia.org/wiki/Paul_C%C3%A9zanne\" title=\"Paul Cézanne\">Paul C&eacute;zanne</a> (known as the father of Post-Impressionism), <a href=\"https://en.wikipedia.org/wiki/Paul_Gauguin\" title=\"Paul Gauguin\">Paul Gauguin</a>, <a href=\"https://en.wikipedia.org/wiki/Vincent_van_Gogh\" title=\"Vincent van Gogh\">Vincent van Gogh</a> and <a href=\"https://en.wikipedia.org/wiki/Georges_Seurat\" title=\"Georges Seurat\">Georges Seurat</a>.</p>"
+    }
+  },
+  {
+    "model": "art.style",
+    "pk": 2,
+    "fields": {
+      "name": "Italian Renaissance",
+      "description": "<p>The <strong>Italian Renaissance</strong> was a period in <a href=\"https://en.wikipedia.org/wiki/History_of_Italy\" title=\"History of Italy\">Italian history</a> that covered the 14th through the 17th centuries. The period is known for the development of a culture that spread across <a href=\"https://en.wikipedia.org/wiki/Europe\" title=\"Europe\">Europe</a> and marked the transition from the <a href=\"https://en.wikipedia.org/wiki/Middle_Ages\" title=\"Middle Ages\">Middle Ages</a> to <a href=\"https://en.wikipedia.org/wiki/Modernity\" title=\"Modernity\">modernity</a>. Proponents of a &quot;long Renaissance&quot; argue that it started around the year 1300 and lasted until about 1600. In some fields, a <a href=\"https://en.wikipedia.org/wiki/Italian_Renaissance_painting#Proto-Renaissance_painting\" title=\"Italian Renaissance painting\">Proto-Renaissance</a>, beginning around 1250, is typically accepted. The French word <em>renaissance</em> (corresponding to <em>rinascimento</em> in Italian) means &#39;rebirth&#39;, and defines the period as one of cultural revival and renewed interest in <a href=\"https://en.wikipedia.org/wiki/Classical_antiquity\" title=\"Classical antiquity\">classical antiquity</a> after the centuries during what <a href=\"https://en.wikipedia.org/wiki/Renaissance_humanism\" title=\"Renaissance humanism\">Renaissance humanists</a> labeled as the <a href=\"https://en.wikipedia.org/wiki/Dark_Ages_(historiography)\" title=\"Dark Ages (historiography)\">&quot;Dark Ages&quot;</a>. The Renaissance author <a href=\"https://en.wikipedia.org/wiki/Giorgio_Vasari\" title=\"Giorgio Vasari\">Giorgio Vasari</a> used the term <em>rinascita</em> &#39;rebirth&#39; in his <em><a href=\"https://en.wikipedia.org/wiki/Lives_of_the_Most_Excellent_Painters,_Sculptors,_and_Architects\" title=\"\">Lives of the Most Excellent Painters, Sculptors, and Architects</a></em> in 1550, but the concept became widespread only in the 19th century, after the work of scholars such as <a href=\"https://en.wikipedia.org/wiki/Jules_Michelet\" title=\"Jules Michelet\">Jules Michelet</a> and <a href=\"https://en.wikipedia.org/wiki/Jacob_Burckhardt\" title=\"Jacob Burckhardt\">Jacob Burckhardt</a>.</p>"
+    }
+  },
+  {
+    "model": "art.piece",
+    "pk": 1,
+    "fields": {
+      "title": "Skull of a Skeleton with Burning Cigarette",
+      "artist": 1,
+      "location": 1,
+      "description": "<p><em><strong>Skull of a Skeleton with Burning Cigarette</strong></em> (<a href=\"https://en.wikipedia.org/wiki/Dutch_language\" title=\"Dutch language\">Dutch</a>: <em>Kop van een skelet met brandende sigaret</em>) is an early work by <a href=\"https://en.wikipedia.org/wiki/Vincent_van_Gogh\" title=\"Vincent van Gogh\">Vincent van Gogh</a>. The small and undated oil-on-canvas painting featuring a skeleton and <a href=\"https://en.wikipedia.org/wiki/Cigarette\" title=\"Cigarette\">cigarette</a> is part of the permanent collection of the <a href=\"https://en.wikipedia.org/wiki/Van_Gogh_Museum\" title=\"Van Gogh Museum\">Van Gogh Museum</a> in <a href=\"https://en.wikipedia.org/wiki/Amsterdam\" title=\"Amsterdam\">Amsterdam</a>. It was most likely painted in the winter of 1885&ndash;86 as a satirical comment on conservative academic practices. Before it was common to use live humans as models, the academic routine included the study of skeletons to develop an understanding of human anatomy. Van Gogh was in Antwerp, Belgium at that time attending classes at the <a href=\"https://en.wikipedia.org/wiki/Royal_Academy_of_Fine_Arts_(Antwerp)\" title=\"Royal Academy of Fine Arts (Antwerp)\">Royal Academy of Fine Arts</a>, which he later said were boring and taught him nothing</p>",
+      "created_date": "2021-11-14T14:21:32.057Z",
+      "wiki_url": "https://en.wikipedia.org/wiki/Skull_of_a_Skeleton_with_Burning_Cigarette",
+      "image": "fixture/head_of_a_skeleton_with_a_burning_cigarette.jpg",
+      "image_b64_thumbnail": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAoAB4DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDxKzsbzVLsW9nby3E7dEjUk11SfDDxILYz3EVvbADO2abB/TNb3whmtreDWZGA+0jyypB+bbz0/H+VaniHxKJVuZJEkaFIt4JyuH3ADmuOdWSlyxNIxurs8lvtPudOujBdRlHHvkH3B70lu21iQx6djitjVWluLHzpFdklJeMseQR1IzyRj/PFYUXLHnt3rSL5lqJ6Mu6LrE+j3rSQsfLlXypkBxuQ9eex7g16bbWyapa2qSTrIVY/ak85t0sYX5WGeTjjJxzXmGi6Hf67dvBYwtII13yuBxGncn/DvXb3FrYi30fTrG5klnjHDH5XO/5x05AwevvWdZK+m44sy/F1skCBbdyxChAGPzBPTHTH055rkFGPc4rptVtrdrd/tU80+riQ5MT5iRR3HHJ/GubeNopCpIJ9auna1hS3ueo3GpWOjWoi0ic2KXKiR41twu0Y6MT1PUVlwau7zOlxdtBGY1KsLcOxBHC/LjiiiuexoZF3G91eh7Mxp5aMcblCMAOSO4yO1Yd4DNN545Mmcjr0oorWm9SGf//Z",
+      "styles": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "art.piece",
+    "pk": 2,
+    "fields": {
+      "title": "Mona Lisa",
+      "artist": 2,
+      "location": 2,
+      "description": "<p>The <em><strong>Mona Lisa</strong></em> (<a href=\"https://en.wikipedia.org/wiki/Help:IPA/English\" title=\"Help:IPA/English\">/ˌmoʊnə ˈliːsə/</a>; <a href=\"https://en.wikipedia.org/wiki/Italian_language\" title=\"Italian language\">Italian</a>: <em>Gioconda</em> <a href=\"https://en.wikipedia.org/wiki/Help:IPA/Italian\" title=\"Help:IPA/Italian\">[dʒoˈkonda]</a> or <em>Monna Lisa</em> <a href=\"https://en.wikipedia.org/wiki/Help:IPA/Italian\" title=\"Help:IPA/Italian\">[ˈmɔnna ˈliːza]</a>; <a href=\"https://en.wikipedia.org/wiki/French_language\" title=\"French language\">French</a>: <em>Joconde</em> <a href=\"https://en.wikipedia.org/wiki/Help:IPA/French\" title=\"Help:IPA/French\">[ʒɔkɔ̃d]</a>) is a half-length <a href=\"https://en.wikipedia.org/wiki/Portrait_painting\" title=\"Portrait painting\">portrait painting</a> by Italian artist <a href=\"https://en.wikipedia.org/wiki/Leonardo_da_Vinci\" title=\"\">Leonardo da Vinci</a>. Considered an archetypal <a href=\"https://en.wikipedia.org/wiki/Masterpiece\" title=\"Masterpiece\">masterpiece</a> of the <a href=\"https://en.wikipedia.org/wiki/Italian_Renaissance\" title=\"Italian Renaissance\">Italian Renaissance</a>,<a href=\"https://en.wikipedia.org/wiki/Mona_Lisa#cite_note-4\">[4]</a><a href=\"https://en.wikipedia.org/wiki/Mona_Lisa#cite_note-5\">[5]</a> it has been described as &quot;the best known, the most visited, the most written about, the most sung about, the most parodied work of art in the world&quot;.<a href=\"https://en.wikipedia.org/wiki/Mona_Lisa#cite_note-6\">[6]</a> The painting&#39;s novel qualities include the subject&#39;s enigmatic expression,<a href=\"https://en.wikipedia.org/wiki/Mona_Lisa#cite_note-ns1-7\">[7]</a> the monumentality of the composition, the subtle modelling of forms, and the atmospheric illusionism.<a href=\"https://en.wikipedia.org/wiki/Mona_Lisa#cite_note-Louvre-8\">[8]</a></p>",
+      "created_date": "2021-11-14T14:30:29.455Z",
+      "wiki_url": "https://en.wikipedia.org/wiki/Mona_Lisa",
+      "image": "fixture/mona_lisa.jpg",
+      "image_b64_thumbnail": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAoABsDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCQaSsi5CjB9KzdThuLHTpb6CyW4tomKuwkwcjrgexrEsdTvtsbW0jq46EdB9antddjk8NXFo0LSXkZkRgAxyzHIb09a8upCcbNdzejThJvmNjSorTV7OK8tgpSRc7T1B6EGrh0lCfuAfhXB+FNQnsIt0XJjkPy89/auibWLmRi7RrknnitpUpKTSehhZXtYwLyaNNJDg5dyPL5Ix9fauv8N654X0bwwUkDi5ClpHMYYyP9fT0rgS8upsIfPTKtsjR2wBn+VQ6vo2q6Rb4urcmIn/XRNvQ/iKc8PCp+7lKzudvO4+9FaEq6kLS+S8tbclHY7mkIIPsAOldELyxkUO6SKxGSFYYrz9ZJSU3bvlPyg10FteL9nTcz5x610vDqysZKab1MGzu1t76O4dBIEbcQe9a974wup4nQDarElVA+79KKK3qUYTleSFGpKMdDn59QmuXXzWPynrVyK9VYlG0HHtRRV8qSsiFJt3Z//9k=",
+      "styles": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "art.piece",
+    "pk": 3,
+    "fields": {
+      "title": "The Potato Eaters",
+      "artist": 1,
+      "location": 1,
+      "description": "<p><em><strong>The Potato Eaters</strong></em> (<a href=\"https://en.wikipedia.org/wiki/Dutch_language\" title=\"Dutch language\">Dutch</a>: <em>De Aardappeleters</em>) is an oil painting by Dutch artist <a href=\"https://en.wikipedia.org/wiki/Vincent_van_Gogh\" title=\"Vincent van Gogh\">Vincent van Gogh</a> painted in April 1885 in <a href=\"https://en.wikipedia.org/wiki/Nuenen\" title=\"Nuenen\">Nuenen</a>, Netherlands.<a href=\"https://en.wikipedia.org/wiki/The_Potato_Eaters#cite_note-vgg-1\">[1]</a> It is in the <a href=\"https://en.wikipedia.org/wiki/Van_Gogh_Museum\" title=\"Van Gogh Museum\">Van Gogh Museum</a> in Amsterdam. The original oil sketch of the painting is at the <a href=\"https://en.wikipedia.org/wiki/Kr%C3%B6ller-M%C3%BCller_Museum\" title=\"Kröller-Müller Museum\">Kr&ouml;ller-M&uuml;ller Museum</a> in Otterlo, and he also made <a href=\"https://en.wikipedia.org/wiki/Lithography\" title=\"Lithography\">lithographs</a> of the image, which are held in collections including the <a href=\"https://en.wikipedia.org/wiki/Museum_of_Modern_Art\" title=\"Museum of Modern Art\">Museum of Modern Art</a> in New York City. The painting is considered to be one of Van Gogh&#39;s masterpieces.</p>",
+      "created_date": "2021-11-14T14:31:56.830Z",
+      "wiki_url": "https://en.wikipedia.org/wiki/The_Potato_Eaters",
+      "image": "fixture/potato_eaters.jpg",
+      "image_b64_thumbnail": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAcACgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDyaZ5ZGkcZ4GRikF590hOOnU1PcmEKbdSS7sOc4C896itxaG5k+0RM8ZzwcqRx2x361k5dxJE19bJBGrS7CX5Vo5M1TVGECSiQlSxB3fh/jUqMokMMscsjKhIZyANvarkEf2TS1uIyjtBO27HI+6vTPXGf0qVJodrlAx3EDDzBgdRjniirCahEjNazr5wOSsinoTzg57UVopvqibFS5O67cFtuT1q1YQLK7edLsRjgqrDJHfqaqXUa72bnOTVPewBIOMdqmSbViti3dzFbzYjEQwtsQAj7oPU+uatXiwR26lJjIHYsqKSF246ketY0pPmmlRiWKnpjpRy7CuWt6jmPglt3Haikt41dcHPXqKKtNIVj/9k=",
+      "styles": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "art.piece",
+    "pk": 4,
+    "fields": {
+      "title": "The Starry Night",
+      "artist": 1,
+      "location": 3,
+      "description": "<p><em><strong>The Starry Night</strong></em> is an oil-on-canvas painting by the Dutch <a href=\"https://en.wikipedia.org/wiki/Post-Impressionism\" title=\"Post-Impressionism\">Post-Impressionist</a> painter <a href=\"https://en.wikipedia.org/wiki/Vincent_van_Gogh\" title=\"Vincent van Gogh\">Vincent van Gogh</a>. Painted in June 1889, it depicts the view from the east-facing window of his <a href=\"https://en.wikipedia.org/wiki/Lunatic_asylum\" title=\"Lunatic asylum\">asylum</a> room at <a href=\"https://en.wikipedia.org/wiki/Saint-R%C3%A9my-de-Provence\" title=\"Saint-Rémy-de-Provence\">Saint-R&eacute;my-de-Provence</a>, just before sunrise, with the addition of an imaginary village. It has been in the permanent collection of the <a href=\"https://en.wikipedia.org/wiki/Museum_of_Modern_Art\" title=\"Museum of Modern Art\">Museum of Modern Art</a> in New York City since 1941, acquired through the <a href=\"https://en.wikipedia.org/wiki/Lillie_P._Bliss#The_Lillie_P._Bliss_Bequest\" title=\"Lillie P. Bliss\">Lillie P. Bliss Bequest</a>. Widely regarded as Van Gogh&#39;s <a href=\"https://en.wikipedia.org/wiki/Masterpiece\" title=\"Masterpiece\">magnum opus</a>, <em>The Starry Night</em> is one of the most recognized paintings in Western art.</p>",
+      "created_date": "2021-11-14T14:35:07.184Z",
+      "wiki_url": "https://en.wikipedia.org/wiki/The_Starry_Night",
+      "image": "fixture/starry_night.jpg",
+      "image_b64_thumbnail": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAgACgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDkLlpLLS59MZY9m4sGYfNjPFWILW8huXEEkU5lRQ8u35fpWnqsyR6TdTpEzmNMkEBgmTjOf6VBpM11q1jHCtuz2/lorSqTuGOv5/416Cmr2SOXWxWNhObiN3NvLEH+aGN8L9Oacti8832lLbybIPsIB5U9/wBa0f3cEmBArR4x8hAB9jUYgdInImfYw3EEcHJ7Vot0S2dUmi6alsi+UjMArBz1Y+uaKq2dhqL26I9z5VsCPlbrj6UV5PJKDanUvqdEXdaKxxuvtaNoVy1pO2/fyu/IcbufxqPwd4pj0uJrWd1VWX5SRkZH8utc7cws1u0iI2SxPI7etZudrZAxz2FazmmxRjZHoLappcoeRInlbcTtJxk96SLxIOFi0yMFOUZ5cjP41ydpdSCHOMAfdI4xUyvdsxeQ/KvR0bn2rf2kX/w5Hs7HQXr3utbJ7u98oKwKxQ5wSD1PrRWOl9J8iJMHBPZOW9yM/wCcUVMpRvokXFM//9k=",
+      "styles": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "art.piece",
+    "pk": 5,
+    "fields": {
+      "title": "The Last Supper",
+      "artist": 2,
+      "location": 4,
+      "description": "<p><em><strong>The Last Supper</strong></em> is a late 15th-century <a href=\"https://en.wikipedia.org/wiki/Mural\" title=\"Mural\">mural</a> painting by Italian artist <a href=\"https://en.wikipedia.org/wiki/Leonardo_da_Vinci\" title=\"Leonardo da Vinci\">Leonardo da Vinci</a> housed by the <a href=\"https://en.wikipedia.org/wiki/Refectory\" title=\"Refectory\">refectory</a> of the Convent of <a class=\"mw-redirect\" href=\"https://en.wikipedia.org/wiki/Santa_Maria_delle_Grazie_(Milan)\" title=\"Santa Maria delle Grazie (Milan)\">Santa Maria delle Grazie</a> in <a href=\"https://en.wikipedia.org/wiki/Milan\" title=\"Milan\">Milan</a>, <a href=\"https://en.wikipedia.org/wiki/Italy\" title=\"Italy\">Italy</a>. It is one of the Western world&#39;s most recognizable paintings.</p>\r\n\r\n<p>The work is assumed to have been started around 1495&ndash;96 and was commissioned as part of a plan of renovations to the church and its convent buildings by Leonardo&#39;s patron <a href=\"https://en.wikipedia.org/wiki/Ludovico_Sforza\" title=\"Ludovico Sforza\">Ludovico Sforza</a>, <a href=\"https://en.wikipedia.org/wiki/List_of_rulers_of_Milan\" title=\"List of rulers of Milan\">Duke of Milan</a>. The painting represents the scene of the <a href=\"https://en.wikipedia.org/wiki/Last_Supper\" title=\"Last Supper\">Last Supper</a> of <a href=\"https://en.wikipedia.org/wiki/Jesus\" title=\"Jesus\">Jesus</a> with the <a class=\"mw-redirect\" href=\"https://en.wikipedia.org/wiki/Twelve_Apostles\" title=\"Twelve Apostles\">Twelve Apostles</a>, as it is told in the <a href=\"https://en.wikipedia.org/wiki/Gospel_of_John\" title=\"Gospel of John\">Gospel of John</a>&nbsp;&ndash; specifically the moment after <a href=\"https://en.wikipedia.org/wiki/Jesus_predicts_his_betrayal\" title=\"Jesus predicts his betrayal\">Jesus announces that one of his apostles will betray him</a>.</p>\r\n\r\n<p>Due to the methods used, a variety of environmental factors, and intentional damage, little of the original painting remains today despite numerous restoration attempts, the last being completed in 1999.</p>",
+      "created_date": "2021-11-14T14:38:29.429Z",
+      "wiki_url": "https://en.wikipedia.org/wiki/The_Last_Supper_(Leonardo)",
+      "image": "fixture/the_last_supper.jpg",
+      "image_b64_thumbnail": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAUACgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDzfSryaKOY7t6IuQGOcc1bku3M6tEh3E4II696g0KwmdEYwK8bA789Se34dK7HT/D12byK6jtSQr7j8wG33HPtWGtzodmjmhdXpBf7OMdM4NdN4V1OKK3m+1QBp9xCrjjhSeT+FbEmhazIphKnyWnMuCwGSW3ZwO9ULzw/fQSsYrdSC24sz/Mcgjn16mlK/RAkuph+J9TnvbfT5FKwxzxF2jj6Z3Efj0oqO90KRYz58ZZIhtQq+AvP/wBeispX6mi12KlhZJJKF82ZR6I5FdZoluIdStws052uPvSk55ooptu4rKxuv95vqapa3apNfSFnkHCjCuRj5RRRTEjmJNNh807pJmHTDSHFFFFSM//Z",
+      "styles": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "art.piece",
+    "pk": 6,
+    "fields": {
+      "title": "Wheat Field with a Lark",
+      "artist": 1,
+      "location": 1,
+      "description": "<p>In 1887, while <a href=\"https://en.wikipedia.org/wiki/Vincent_van_Gogh\" title=\"Vincent van Gogh\">Vincent van Gogh</a> was residing in <a href=\"https://en.wikipedia.org/wiki/Paris\" title=\"Paris\">Paris</a>, he executed an oil painting commonly known as <em><strong>Wheat Field with a Lark</strong></em>.</p>\r\n\r\n<p>The center part shows a partially harvested field of wheat under a sky patterned with light clouds. A <a href=\"https://en.wikipedia.org/wiki/Lark\" title=\"Lark\">lark</a> takes flight toward the upper left of the canvas.</p>\r\n\r\n<p>The painting measures 54 x 65.5&nbsp;cm (approximately 21-1/4 x 25-3/4 inches) and is housed in the <a href=\"https://en.wikipedia.org/wiki/Van_Gogh_Museum\" title=\"Van Gogh Museum\">Van Gogh Museum</a> in <a href=\"https://en.wikipedia.org/wiki/Amsterdam\" title=\"Amsterdam\">Amsterdam</a>, where it is known as <em>Korenveld met patrijs</em> (English: <em>Wheat field with <a href=\"https://en.wikipedia.org/wiki/Partridge\" title=\"Partridge\">partridge</a></em>).</p>",
+      "created_date": "2021-11-14T14:39:58.505Z",
+      "wiki_url": "",
+      "image": "fixture/wheat_field_with_a_lark.jpeg",
+      "image_b64_thumbnail": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAhACgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD0JIsybWBK4wTmpPJjQkZwPekbUbSLG6ZME4znikfUrF/lNzH+daKor2uZcrIJ1HIVTux6daxbqGVpCdxHdWHGDWu2o2Cz4aaNs/dO7g/4VXmvLGNywlQqTyG5Ga1jWiupPKzKNtMuHfjjOSOD70VZn1GyI274if8AZ6UVEqkZO5STOXF5KGLJDkEcc9c9DUxurl43jcKqMQRnr9K0xZ2WdjMwDfIcPx/OpYbKzjlEb7zt+7l8ivnXWg3seg6Uu5kyNkLHGpSTbhZDjH/1qq3ZuijRyKyPjPC9TXQvY2k8jv5R+Xk5bt9KW4t4JAscauHUAAbiOPT+dQq8YvYXsZPqcJL9pkIG5tw5welFdW+j2rqxwihjliXJ5orZYyn2D2MyW3/1M/1pLH77f9dKKKHuyy/P95v+uX9RV/T/APVn6Ciipn8IupSvfuP/AL1FFFaQ+EaP/9k=",
+      "styles": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "art.piece",
+    "pk": 7,
+    "fields": {
+      "title": "Wheatfield with Crows",
+      "artist": 1,
+      "location": 1,
+      "description": "<p><em><strong>Wheatfield with Crows</strong></em> is a July 1890 painting by <a href=\"https://en.wikipedia.org/wiki/Vincent_van_Gogh\" title=\"Vincent van Gogh\">Vincent van Gogh</a>. It has been cited by several critics as one of his greatest works.</p>\r\n\r\n<p>It is commonly stated that this was van Gogh&#39;s final painting. However, art historians are uncertain as to which painting was van Gogh&#39;s last, as no clear historical records exist. The evidence of his letters suggests that <em>Wheatfield with Crows</em> was completed around 10 July and predates such paintings as <em><a href=\"https://en.wikipedia.org/wiki/The_Town_Hall_at_Auvers\" title=\"The Town Hall at Auvers\">Auvers Town Hall on 14 July 1890</a></em> and <em><a href=\"https://en.wikipedia.org/wiki/Daubigny%27s_Garden\" title=\"Daubigny's Garden\">Daubigny&#39;s Garden</a></em>. Moreover, <a href=\"https://en.wikipedia.org/wiki/Jan_Hulsker\" title=\"Jan Hulsker\">Jan Hulsker</a> has written that a painting of harvested wheat, <em>Field with Stacks of Wheat</em> (F771), must be a later painting.</p>",
+      "created_date": "2021-11-14T14:41:38.261Z",
+      "wiki_url": "https://en.wikipedia.org/wiki/Wheatfield_with_Crows",
+      "image": "fixture/wheatfield_with_crows.jpg",
+      "image_b64_thumbnail": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAATACgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDlNLspo5nBT5WByQeeParWs6RcYiuLaJZI8jcNuMcVc0fxDLAkQmiWaJuHfadx9uO9dXHJZzN5rEiJl4TkcfT+tYV83qUnb2enrf8AQVPAxl9o4zRtBgv5f9NTycAsMZBz6c1Nc+HNOhuN1qJChyCwOea3NS1BAxkskcOrYb5RhgD3q3Y3BuI/PmjVSMkxjjHpjNJ51JJTdP5X/wCAP+z1tzHFzeGiqiWPcEbs/UetFdjeapbxZBaPbjpwQPaiqhncpK/sfx/4APLv7/4Hnmju29lz8pfkHpWwbueVCjyEqZMYAA4xRRWNZL2jOqL/AHCZcsZHeazRmJVgxI9cDim39xKt+0KuRHuA2/hRRXC0var0f5nXBIpK7NM2ccg9AB60UUV02A//2Q==",
+      "styles": [
+        1
+      ]
+    }
+  }
+]
