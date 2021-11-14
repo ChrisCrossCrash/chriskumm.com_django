@@ -48,3 +48,13 @@ class PieceSerializer(serializers.ModelSerializer):
             "wiki_url",
             "image",
         ]
+
+
+class PieceSerializerWithoutThumbnail(PieceSerializer):
+    @staticmethod
+    def get_image_info(obj):
+        return {
+            "url": obj.image.url,
+            "height": obj.image.height,
+            "width": obj.image.width,
+        }

@@ -4,6 +4,7 @@ from rest_framework.generics import ListAPIView
 from .models import Piece, Artist, Location, Style
 from .serializers import (
     PieceSerializer,
+    PieceSerializerWithoutThumbnail,
     ArtistSerializer,
     LocationSerializer,
     StyleSerializer,
@@ -18,6 +19,11 @@ class PieceList(ListAPIView):
     queryset = Piece.objects.all()
     serializer_class = PieceSerializer
     pagination_class = ArtPaginationClass
+
+
+class AllPieceList(ListAPIView):
+    queryset = Piece.objects.all()
+    serializer_class = PieceSerializerWithoutThumbnail
 
 
 class ArtistList(ListAPIView):
