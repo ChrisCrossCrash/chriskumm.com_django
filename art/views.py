@@ -11,7 +11,7 @@ from .serializers import (
 
 
 class ArtPaginationClass(PageNumberPagination):
-    page_size = 2
+    page_size = 4
 
 
 class PieceList(ListAPIView):
