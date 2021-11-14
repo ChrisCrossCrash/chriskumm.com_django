@@ -110,6 +110,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+venv_wsl/
 
 # Spyder project settings
 .spyderproject
@@ -132,7 +133,9 @@ dmypy.json
 # Don't include the top level '/static/' or '/media/' directories,
 # as they are only used to hold files in the development environment.
 /static/
-/media/
+/media/*
+# ... except for files used for testing
+!/media/fixture/
 
 # uWSGI settings
 uwsgi_params
