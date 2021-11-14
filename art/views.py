@@ -27,7 +27,7 @@ class ArtistList(ListAPIView):
 
 class LocationList(ListAPIView):
     queryset = Location.objects.all()
-    serializer_class = ArtistSerializer
+    serializer_class = LocationSerializer
 
 
 class StyleList(ListAPIView):
