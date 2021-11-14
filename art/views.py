@@ -1,4 +1,4 @@
-from django.http import HttpResponsePermanentRedirect
+from django.http import HttpResponseRedirect
 
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.generics import ListAPIView
@@ -73,4 +73,4 @@ class PiecesByStyleList(ListAPIView):
 
 
 def redirect_to_art_front_end(request):
-    return HttpResponsePermanentRedirect(config("ART_URL"))
+    return HttpResponseRedirect(config("ART_URL"))
