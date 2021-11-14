@@ -21,7 +21,7 @@ class StyleSerializer(serializers.ModelSerializer):
         fields = ["name", "pk"]
 
 
-class InstaArtSerializer(serializers.ModelSerializer):
+class PieceSerializer(serializers.ModelSerializer):
     artist = ArtistSerializer()
     location = LocationSerializer()
     styles = StyleSerializer(many=True)

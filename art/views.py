@@ -3,7 +3,7 @@ from rest_framework.generics import ListAPIView
 
 from .models import Piece, Artist, Location, Style
 from .serializers import (
-    InstaArtSerializer,
+    PieceSerializer,
     ArtistSerializer,
     LocationSerializer,
     StyleSerializer,
@@ -16,7 +16,7 @@ class ArtPaginationClass(PageNumberPagination):
 
 class PieceList(ListAPIView):
     queryset = Piece.objects.all()
-    serializer_class = InstaArtSerializer
+    serializer_class = PieceSerializer
     pagination_class = ArtPaginationClass
 
 
@@ -36,7 +36,7 @@ class StyleList(ListAPIView):
 
 
 class PiecesByArtistList(ListAPIView):
-    serializer_class = InstaArtSerializer
+    serializer_class = PieceSerializer
     pagination_class = ArtPaginationClass
 
     def get_queryset(self):
@@ -45,7 +45,7 @@ class PiecesByArtistList(ListAPIView):
 
 
 class PiecesByLocationList(ListAPIView):
-    serializer_class = InstaArtSerializer
+    serializer_class = PieceSerializer
     pagination_class = ArtPaginationClass
 
     def get_queryset(self):
@@ -54,7 +54,7 @@ class PiecesByLocationList(ListAPIView):
 
 
 class PiecesByStyleList(ListAPIView):
-    serializer_class = InstaArtSerializer
+    serializer_class = PieceSerializer
     pagination_class = ArtPaginationClass
 
     def get_queryset(self):
