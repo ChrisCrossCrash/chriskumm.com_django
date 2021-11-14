@@ -1,5 +1,8 @@
 from django.db import models
 from ckeditor.fields import RichTextField
+from PIL import Image as PILImage
+import io
+import base64
 
 
 class Artist(models.Model):
@@ -40,6 +43,22 @@ class Piece(models.Model):
     # ImageFields require 'Pillow' to be installed
     # A media url is also required in urlpatterns for serving files in development
     image = models.ImageField(upload_to="art/piece_images/")
+    image_b64_thumbnail = models.TextField(null=True, blank=True)
+
+    def generate_base64_data_thumbnail(self, size=(40, 40)):
+        """Generate a base64 image data URL from the image field
+
+        This gets called by a `post_save` signal (See: `art.signals.save_base64_thumbnail`).
+        """
+        with PILImage.open(self.image.path) as img:
+            img.thumbnail(size)
+            if img.mode != "RGB":
+                img = img.convert("RGB")
+            buffered = io.BytesIO()
+            img.save(buffered, format="JPEG")
+            b64_img = base64.b64encode(buffered.getvalue()).decode("utf-8")
+
+        return "data:image/jpeg;base64," + b64_img
 
     class Meta:
         ordering = ["-created_date"]

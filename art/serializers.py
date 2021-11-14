@@ -32,6 +32,7 @@ class InstaArtSerializer(serializers.ModelSerializer):
             "url": obj.image.url,
             "height": obj.image.height,
             "width": obj.image.width,
+            "image_b64_thumbnail": obj.image_b64_thumbnail,
         }
 
     image = serializers.SerializerMethodField("get_image_info")
