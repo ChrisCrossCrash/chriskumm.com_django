@@ -1,11 +1,7 @@
-from pprint import pprint
-
 from django.urls import reverse
 
 from rest_framework.test import APITestCase
 from rest_framework import status
-
-from .models import Piece, Style, Artist, Location
 
 
 class ArtAPIStatusTestCase(APITestCase):
