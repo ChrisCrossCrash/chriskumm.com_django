@@ -1,3 +1,29 @@
+[tool.poetry]
+name = "chriskumm.com_django"
+version = "1.0.0"
+description = "Django back end for ChrisKumm.com"
+authors = ["Christopher Kumm <chrislkumm@protonmail.com>"]
+license = "UNLICENSED"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Django = "^4.0.1"
+python-decouple = "^3.5"
+django-ckeditor = "^6.2.0"
+django-admin-interface = "^0.18.4"
+djangorestframework = "^3.13.1"
+django-cors-headers = "^3.11.0"
+requests = "^2.27.1"
+Pillow = "^9.0.0"
+
+[tool.poetry.dev-dependencies]
+black = "^21.12b0"
+pre-commit = "^2.16.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
 # https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html#configuration-via-a-file
 [tool.black]
 target-version = ['py38']
