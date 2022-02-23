@@ -1,0 +1,44 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "test - coverage",
+      "type": "python",
+      "request": "launch",
+      "module": "coverage",
+      "args": [
+        "run",
+        "--source='${workspaceFolder}'",
+        "manage.py",
+        "test",
+        "stripe_app"
+      ]
+    },
+    {
+      "name": "testserver",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/manage.py",
+      "args": [
+        "testserver",
+        "${workspaceFolder}/art/fixtures/art_standard.json",
+        "--addrport",
+        "0.0.0.0:48000"
+      ],
+      "django": true
+    },
+    {
+      "name": "test",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/manage.py",
+      "args": [
+        "test"
+      ],
+      "django": true
+    }
+  ]
+}
