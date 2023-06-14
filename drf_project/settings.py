@@ -52,6 +52,9 @@ if DEBUG:
 # Application definition
 
 INSTALLED_APPS = [
+    # Daphne (for running ASGI in development)
+    # https://docs.djangoproject.com/en/4.2/howto/deployment/asgi/daphne/
+    'daphne',
     # Django Admin Interface
     "admin_interface",
     "colorfield",
@@ -70,6 +73,10 @@ INSTALLED_APPS = [
     "corsheaders",
     "ckeditor",
 ]
+
+# Enable Daphne ASGI server
+# https://docs.djangoproject.com/en/4.2/howto/deployment/asgi/daphne/
+ASGI_APPLICATION = "drf_project.asgi.application"
 
 MIDDLEWARE = [
     # For Django CORS Headers

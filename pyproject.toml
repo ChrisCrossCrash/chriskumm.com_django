@@ -10,16 +10,17 @@ python = "^3.8"
 Django = "^4.0.7"
 python-decouple = "^3.5"
 django-ckeditor = "^6.2.0"
-django-admin-interface = "^0.18.4"
+django-admin-interface = "^0.26.0"
 djangorestframework = "^3.13.1"
-django-cors-headers = "^3.11.0"
+django-cors-headers = "^4.0.0"
 requests = "^2.27.1"
 Pillow = "^9.0.0"
-daphne = "^3.0.2"
+daphne = "^4.0.0"
+twisted = {extras = ["http2", "tls"], version = "^22.10.0"}
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.3.3"
 black = "^21.12b0"
-pre-commit = "^2.16.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
