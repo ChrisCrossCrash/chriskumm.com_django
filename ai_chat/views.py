@@ -4,14 +4,25 @@ from django.conf import settings
 import json
 import openai
 from decouple import config
+from typing import Dict
+import requests
+
 
 openai.api_key = config("OPENAI_API_KEY")
 
 
-# Function to verify reCAPTCHA token (You need to implement this)
-def verify_token(recaptcha_token: str) -> dict:
-    # TODO: Implement the reCAPTCHA verification logic
-    return {"success": True}
+def verify_recaptcha_token(recaptcha_token: str) -> Dict[str, object]:
+    """Verify the client-provided reCAPTCHA token with Google's reCAPTCHA verify API."""
+    payload = {
+        'secret': settings.RECAPTCHA_SECRET_KEY,
+        'response': recaptcha_token,
+    }
+    headers = {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8'}
+
+    response = requests.post("https://www.google.com/recaptcha/api/siteverify", data=payload, headers=headers)
+    verification_data = response.json()
+
+    return verification_data
 
 
 @api_view(['POST'])
@@ -37,7 +48,7 @@ def chat_api(request):
                 "hostname": "chriskumm.com",
             }
         else:
-            verification = verify_token(recaptcha_token)
+            verification = verify_recaptcha_token(recaptcha_token)
 
         if not verification.get("success"):
             return Response({"message": "Bad request: reCAPTCHA token failed verification."}, status=400)
