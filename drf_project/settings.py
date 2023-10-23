@@ -74,6 +74,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "ckeditor",
     "solo",
+    "django_modern_user",
 ]
 
 # Enable Daphne ASGI server
@@ -128,7 +129,7 @@ DATABASES = {
 
 
 # Override the default User model
-# https://docs.djangoproject.com/en/3.1/topics/auth/customizing/#using-a-custom-user-model-when-starting-a-project
+# https://github.com/ChrisCrossCrash/django-modern-user
 
 AUTH_USER_MODEL = "core.CoreUser"
 
