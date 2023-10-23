@@ -54,7 +54,7 @@ if DEBUG:
 INSTALLED_APPS = [
     # Daphne (for running ASGI in development)
     # https://docs.djangoproject.com/en/4.2/howto/deployment/asgi/daphne/
-    'daphne',
+    "daphne",
     # Django Admin Interface
     "admin_interface",
     "colorfield",

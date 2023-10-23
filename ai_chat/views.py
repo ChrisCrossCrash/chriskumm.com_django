@@ -15,28 +15,30 @@ openai.api_key = config("OPENAI_API_KEY")
 def verify_recaptcha_token(recaptcha_token: str) -> Dict[str, object]:
     """Verify the client-provided reCAPTCHA token with Google's reCAPTCHA verify API."""
     payload = {
-        'secret': settings.RECAPTCHA_SECRET_KEY,
-        'response': recaptcha_token,
+        "secret": settings.RECAPTCHA_SECRET_KEY,
+        "response": recaptcha_token,
     }
-    headers = {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8'}
+    headers = {"Content-Type": "application/x-www-form-urlencoded; charset=utf-8"}
 
-    response = requests.post("https://www.google.com/recaptcha/api/siteverify", data=payload, headers=headers)
+    response = requests.post(
+        "https://www.google.com/recaptcha/api/siteverify", data=payload, headers=headers
+    )
     verification_data = response.json()
 
     return verification_data
 
 
-@api_view(['POST'])
+@api_view(["POST"])
 def chat_api(request):
     """Handle chat completions using OpenAI API."""
 
-    if request.method != 'POST':
+    if request.method != "POST":
         return Response({"message": "Method not allowed"}, status=405)
 
     try:
         request_data = json.loads(request.body)
-        client_messages = request_data.get('clientMessages', [])
-        recaptcha_token = request_data.get('recaptchaToken', '')
+        client_messages = request_data.get("clientMessages", [])
+        recaptcha_token = request_data.get("recaptchaToken", "")
 
         if not client_messages or not recaptcha_token:
             return Response({"message": "Bad request: Invalid form data"}, status=400)
@@ -52,13 +54,13 @@ def chat_api(request):
             verification = verify_recaptcha_token(recaptcha_token)
 
         if not verification.get("success"):
-            return Response({"message": "Bad request: reCAPTCHA token failed verification."}, status=400)
+            return Response(
+                {"message": "Bad request: reCAPTCHA token failed verification."},
+                status=400,
+            )
 
         system_message_content = SystemMessage.get_solo().content
-        system_message = {
-            "role": "system",
-            "content": system_message_content
-        }
+        system_message = {"role": "system", "content": system_message_content}
         messages = [system_message, *client_messages]
 
         completion = openai.ChatCompletion.create(
