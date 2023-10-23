@@ -68,6 +68,7 @@ INSTALLED_APPS = [
     # This project
     "core.apps.CoreConfig",
     "art.apps.ArtConfig",
+    "ai_chat",
     # Third-party
     "rest_framework",
     "corsheaders",
