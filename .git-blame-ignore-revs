@@ -1,7 +1,5 @@
 # To add this to the project's Git config, execute the following:
 # git config blame.ignoreRevsFile .git-blame-ignore-revs
 
-# Migrate code style to Black
-# https://black.readthedocs.io/en/stable/guides/introducing_black_to_your_project.html
 a691b69b418e62891af95c0b45723de7d69b3067
 60a2e7d8dab4d75b7f8d628feae583b4f41243c4
