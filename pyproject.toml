@@ -18,6 +18,7 @@ Pillow = "^10.1.0"
 daphne = "^4.0.0"
 twisted = "^23.8.0"
 openai = "^0.28.1"
+django-solo = "^2.1.0"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.3.3"

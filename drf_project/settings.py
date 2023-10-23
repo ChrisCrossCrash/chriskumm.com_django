@@ -73,6 +73,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "corsheaders",
     "ckeditor",
+    "solo",
 ]
 
 # Enable Daphne ASGI server

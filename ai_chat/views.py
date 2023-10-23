@@ -6,6 +6,7 @@ import openai
 from decouple import config
 from typing import Dict
 import requests
+from .models import SystemMessage
 
 
 openai.api_key = config("OPENAI_API_KEY")
@@ -53,8 +54,7 @@ def chat_api(request):
         if not verification.get("success"):
             return Response({"message": "Bad request: reCAPTCHA token failed verification."}, status=400)
 
-        # TODO: Get this value from a Django model
-        system_message_content = "You are a web developer named Chris."
+        system_message_content = SystemMessage.get_solo().content
         system_message = {
             "role": "system",
             "content": system_message_content
