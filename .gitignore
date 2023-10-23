@@ -143,3 +143,6 @@ uwsgi_params
 
 # The file that Django Maintenance Mode uses to avoid using the DB.
 maintenance_mode_state.txt
+
+# JetBrains IDE settings
+.idea/
