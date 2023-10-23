@@ -15,7 +15,7 @@ openai.api_key = config("OPENAI_API_KEY")
 def verify_recaptcha_token(recaptcha_token: str) -> Dict[str, object]:
     """Verify the client-provided reCAPTCHA token with Google's reCAPTCHA verify API."""
     payload = {
-        "secret": settings.RECAPTCHA_SECRET_KEY,
+        "secret": config("RECAPTCHA_SECRET_KEY"),
         "response": recaptcha_token,
     }
     headers = {"Content-Type": "application/x-www-form-urlencoded; charset=utf-8"}
