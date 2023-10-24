@@ -17,7 +17,7 @@ class CoreAdminSite(admin.AdminSite):
 
     site_header = f"{settings.SITE_NAME} Admin Panel"
     site_title = f"{settings.SITE_NAME} Admin Panel"
-    site_url = 'https://www.chriskumm.com'
+    site_url = "https://www.chriskumm.com"
 
 
 core_admin_site = CoreAdminSite()
