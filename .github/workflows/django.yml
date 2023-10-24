@@ -35,6 +35,7 @@ jobs:
           echo "TIME_ZONE=America/Chicago" >> .env
           echo "SECRET_KEY=FAKE_SECRET_KEY" >> .env
           echo "DOMAIN_NAME=chriskumm.com" >> .env
+          echo "ABUSEIPDB_API_KEY=FAKE_ABUSEIPDB_API_KEY" >> .env
           echo "EMAIL_HOST_USER=FAKE_EMAIL_HOST_USER" >> .env
           echo "EMAIL_HOST_PASSWORD=FAKE_EMAIL_HOST_PASSWORD" >> .env
           echo "EMAIL_HOST=FAKE_EMAIL_HOST" >> .env
