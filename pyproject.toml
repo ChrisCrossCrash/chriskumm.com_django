@@ -31,7 +31,7 @@ build-backend = "poetry.core.masonry.api"
 
 # https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html#configuration-via-a-file
 [tool.black]
-target-version = ['py38']
+target-version = ['py310']
 # How to use `extend-exclude` is very poorly documented,
 # but these links might be useful to understand it.
 # https://github.com/psf/black/issues/1473
