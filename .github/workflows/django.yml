@@ -29,6 +29,17 @@ jobs:
       - name: Run black
         run: |
           poetry run black --check .
+      - name: Create `.env` file
+        run: |
+          echo "DEBUG=False" >> .env
+          echo "TIME_ZONE=America/Chicago" >> .env
+          echo "SECRET_KEY=FAKE_SECRET_KEY" >> .env
+          echo "DOMAIN_NAME=chriskumm.com" >> .env
+          echo "EMAIL_HOST_USER=FAKE_EMAIL_HOST_USER" >> .env
+          echo "EMAIL_HOST_PASSWORD=FAKE_EMAIL_HOST_PASSWORD" >> .env
+          echo "EMAIL_HOST=FAKE_EMAIL_HOST" >> .env
+          echo "OPENAI_API_KEY=FAKE_OPENAI_API_KEY" >> .env
+          echo "RECAPTCHA_SECRET_KEY=FAKE_RECAPTCHA_SECRET_KEY" >> .env
       - name: Check migrations
         run: |
           poetry run python manage.py makemigrations --check --dry-run
