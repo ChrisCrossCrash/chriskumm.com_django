@@ -678,13 +678,13 @@ tests = ["coverage"]
 
 [[package]]
 name = "django-modern-user"
-version = "0.2.7"
+version = "1.0.1"
 description = "An improved custom user model for django projects"
 optional = false
 python-versions = ">=3.8,<4.0"
 files = [
-    {file = "django_modern_user-0.2.7-py3-none-any.whl", hash = "sha256:8a90b4600f57b24242d7f6c890d96918793e8a3d40c8f1fe24cb204e9ed47072"},
-    {file = "django_modern_user-0.2.7.tar.gz", hash = "sha256:096a47c415c7b96c259f4bdfd8147b973c58e3368da9f2bc7db2057fe2aeea8f"},
+    {file = "django_modern_user-1.0.1-py3-none-any.whl", hash = "sha256:ac5f57f1b01afe77979d77c6db725a6a24c2d7a0235f66d6aa6d298f92f0f7a8"},
+    {file = "django_modern_user-1.0.1.tar.gz", hash = "sha256:ab4cbf4f2b528f7dd8671064e3c1539f7ce2668dc022697c56f9556c975f2769"},
 ]
 
 [package.dependencies]
@@ -1679,4 +1679,4 @@ testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8"
-content-hash = "40a0ab1c37e05f2159588497f3188c025b48723a7c02e45aa83acd1df63c8314"
+content-hash = "d4d2e6ec86f893ab59070faec713231d286200cf5ad55cec93b6647ee81bab1d"
