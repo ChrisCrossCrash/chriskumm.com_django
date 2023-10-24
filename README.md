@@ -13,6 +13,7 @@ A simple Django back end for my portfolio site.
 - [Django CORS Headers](https://github.com/adamchainz/django-cors-headers)
 - [Django Admin Interface](https://github.com/fabiocaccamo/django-admin-interface)
 - [Django CKEditor](https://github.com/django-ckeditor/django-ckeditor)
+- [Django Modern User](https://pypi.org/project/django-modern-user/)
 - [Python Decuple](https://github.com/henriquebastos/python-decouple/)
 - [Pillow](https://pillow.readthedocs.io/en/stable/)
 - [Requests](https://2.python-requests.org/en/master/)
