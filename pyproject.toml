@@ -6,8 +6,8 @@ authors = ["Christopher Kumm <chrislkumm@protonmail.com>"]
 license = "UNLICENSED"
 
 [tool.poetry.dependencies]
-python = "^3.8"
-Django = "^4.2.7"
+python = "^3.10"
+Django = "^5.0.1"
 python-decouple = "^3.5"
 django-ckeditor = "^6.2.0"
 django-admin-interface = "^0.26.0"
@@ -19,7 +19,7 @@ daphne = "^4.0.0"
 twisted = "^23.10.0"
 openai = "^0.28.1"
 django-solo = "^2.1.0"
-django-modern-user = "^1.0.1"
+django-modern-user = "^2.0.2"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.3.3"
