@@ -2,14 +2,14 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from django.conf import settings
 import json
-import openai
+from openai import OpenAI
 from decouple import config
 from typing import Dict
 import requests
 from .models import SystemMessage
 
 
-openai.api_key = config("OPENAI_API_KEY")
+client = OpenAI(api_key=config("OPENAI_API_KEY"))
 
 
 def verify_recaptcha_token(recaptcha_token: str) -> Dict[str, object]:
@@ -63,9 +63,8 @@ def chat_api(request):
         system_message = {"role": "system", "content": system_message_content}
         messages = [system_message, *client_messages]
 
-        completion = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",
-            messages=messages,
+        completion = client.chat.completions.create(
+            model="gpt-3.5-turbo", messages=messages
         )
 
         result = completion.choices[0].message.content
