@@ -162,8 +162,6 @@ TIME_ZONE = config("TIME_ZONE")
 
 USE_I18N = False
 
-USE_L10N = True
-
 USE_TZ = True
 
 
