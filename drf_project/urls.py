@@ -8,6 +8,7 @@ urlpatterns = [
     path("api/art/", include("art.urls")),
     path("api/ai-chat/", include("ai_chat.urls")),
     path("api/ai-pals/", include("ai_pals.urls")),
+    path("chat/", include("chat.urls")),
 ]
 
 if settings.DEBUG:
