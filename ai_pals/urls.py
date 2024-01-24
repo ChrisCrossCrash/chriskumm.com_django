@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import index
+from .views import new_character
 
 urlpatterns = [
-    path("", index, name="ai_pals"),
+    path("", new_character, name="ai_pals"),
 ]
