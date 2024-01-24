@@ -20,6 +20,7 @@ twisted = "^23.10.0"
 openai = "^1.9.0"
 django-solo = "^2.1.0"
 django-modern-user = "^2.0.2"
+channels = {extras = ["daphne"], version = "^4.0.0"}
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.3.3"
