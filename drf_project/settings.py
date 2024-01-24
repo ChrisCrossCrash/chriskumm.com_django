@@ -70,6 +70,7 @@ INSTALLED_APPS = [
     "art.apps.ArtConfig",
     "ai_chat",
     "ai_pals",
+    "chat",
     # Third-party
     "rest_framework",
     "corsheaders",
