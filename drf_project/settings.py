@@ -290,3 +290,14 @@ ABUSEIPDB_API_KEY = config("ABUSEIPDB_API_KEY")
 # Be sure to match this with validation in the front end.
 
 MESSAGE_MAX_LENGTH = 5000
+
+
+# Channels
+# https://channels.readthedocs.io/en/latest/tutorial/part_2.html#enable-a-channel-layer
+ASGI_APPLICATION = "drf_project.asgi.application"
+CHANNEL_LAYERS = {
+    # A simple in-memory channel layer for development and small projects.
+    "default": {
+        "BACKEND": "channels.layers.InMemoryChannelLayer",
+    },
+}
