@@ -1,6 +1,11 @@
 import json
 
-from channels.generic.websocket import AsyncWebsocketConsumer
+from channels.generic.websocket import AsyncWebsocketConsumer, WebsocketConsumer
+from decouple import config
+import openai
+
+# TODO: Is this where the client should be defined?
+client = openai.OpenAI(api_key=config("OPENAI_API_KEY"))
 
 
 class ChatConsumer(AsyncWebsocketConsumer):
@@ -45,3 +50,28 @@ class EchoConsumer(AsyncWebsocketConsumer):
     async def receive(self, text_data):
         print(f"echoing message: {text_data}")
         await self.send(text_data=text_data)
+
+
+class AIChatConsumer(WebsocketConsumer):
+    def connect(self):
+        self.accept()
+
+    def disconnect(self, close_code):
+        pass
+
+    def receive(self, text_data):
+        text_data_json = json.loads(text_data)
+        message = text_data_json["message"]
+
+        stream = client.chat.completions.create(
+            model="gpt-3.5-turbo",
+            messages=[{"role": "user", "content": message}],
+            stream=True,
+        )
+
+        for chunk in stream:
+            if chunk.choices[0].delta.content is not None:
+                print(chunk.choices[0].delta.content, end="")
+                self.send(
+                    text_data=json.dumps({"message": chunk.choices[0].delta.content})
+                )
