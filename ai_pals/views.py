@@ -1,9 +1,10 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from openai import OpenAI
+from decouple import config
 
 
-client = OpenAI()
+client = OpenAI(api_key=config("OPENAI_API_KEY"))
 
 
 def generate_image_prompt(characteristics: list[str], description: str) -> str:
