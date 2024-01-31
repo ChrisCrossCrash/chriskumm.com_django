@@ -22,6 +22,9 @@ class CritterDescriptionConsumer(WebsocketConsumer):
 
     def receive(self, text_data):
         text_data_json = json.loads(text_data)
+
+        # Description Generation
+
         prompt = construct_critter_description_prompt(text_data_json)
 
         stream = client.chat.completions.create(
@@ -30,13 +33,37 @@ class CritterDescriptionConsumer(WebsocketConsumer):
             stream=True,
         )
 
+        description = ""
+
         for chunk in stream:
-            print(chunk.choices[0].delta.content, end="")
+            description += chunk.choices[0].delta.content or ""
             self.send(
                 text_data=json.dumps(
                     {
+                        "type": "completion_chunk",
                         "content": chunk.choices[0].delta.content or "",
                         "finish_reason": chunk.choices[0].finish_reason,
                     }
                 )
             )
+
+        # Image Generation
+
+        image_response = client.images.generate(
+            model="dall-e-3",
+            prompt=description,
+            size="1024x1024",
+            n=1,
+            quality="standard",
+        )
+
+        image_url = image_response.data[0].url
+
+        self.send(
+            text_data=json.dumps(
+                {
+                    "type": "image_generation_result",
+                    "image_url": image_url,
+                }
+            )
+        )
