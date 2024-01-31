@@ -29,6 +29,11 @@ SECRET_KEY = config("SECRET_KEY")
 DEBUG = config("DEBUG", cast=bool)
 
 ALLOWED_HOSTS = [".chriskumm.com"]
+if DEBUG:
+    # When DEBUG is True and ALLOWED_HOSTS is empty, the host is validated
+    # against ['.localhost', '127.0.0.1', '[::1]']
+    # https://docs.djangoproject.com/en/5.0/ref/settings/#allowed-hosts
+    ALLOWED_HOSTS = []
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#csrf-trusted-origins
 CSRF_TRUSTED_ORIGINS = ["https://*.chriskumm.com"]
@@ -38,15 +43,6 @@ CORS_ALLOWED_ORIGINS = [
     "https://chriskumm-com-nextjs.vercel.app",
     "https://insta-art-frontend.vercel.app",
 ]
-
-if DEBUG:
-    ALLOWED_HOSTS.extend(
-        [
-            "127.0.0.1",
-            "localhost",
-            "testserver",
-        ]
-    )
 
 
 # Application definition
