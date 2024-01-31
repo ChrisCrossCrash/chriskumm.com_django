@@ -31,8 +31,12 @@ class CritterDescriptionConsumer(WebsocketConsumer):
         )
 
         for chunk in stream:
-            if chunk.choices[0].delta.content is not None:
-                print(chunk.choices[0].delta.content, end="")
-                self.send(
-                    text_data=json.dumps({"message": chunk.choices[0].delta.content})
+            print(chunk.choices[0].delta.content, end="")
+            self.send(
+                text_data=json.dumps(
+                    {
+                        "content": chunk.choices[0].delta.content or "",
+                        "finish_reason": chunk.choices[0].finish_reason,
+                    }
                 )
+            )
