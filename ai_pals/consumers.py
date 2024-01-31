@@ -1,4 +1,5 @@
 import json
+from typing import NamedTuple
 
 from channels.generic.websocket import AsyncWebsocketConsumer, WebsocketConsumer
 from decouple import config
@@ -8,12 +9,39 @@ import openai
 client = openai.OpenAI(api_key=config("OPENAI_API_KEY"))
 
 
-def construct_critter_description_prompt(form_data) -> str:
-    # TODO: process the form data to construct the prompt
-    return "You are a critter in a fantasy world. Describe yourself."
+# TODO: Load these from a file or database
+allowed_characteristics = [
+    "furry",
+    "scaly",
+    "feathery",
+    "slimy",
+    "hairy",
+    "spiky",
+    "cute",
+    "ugly",
+    "beautiful",
+    "strong",
+    "weak",
+    "fast",
+    "slow",
+    "big",
+    "small",
+    "tiny",
+    "huge",
+    "giant",
+    "large",
+    "gigantic",
+    "massive",
+]
 
 
-class CritterDescriptionConsumer(WebsocketConsumer):
+class ClientMessage(NamedTuple):
+    characteristics: list[str]
+
+
+class CritterGenerationConsumer(WebsocketConsumer):
+    """Generates a critter description and image based on user input."""
+
     def connect(self):
         self.accept()
 
@@ -21,15 +49,38 @@ class CritterDescriptionConsumer(WebsocketConsumer):
         pass
 
     def receive(self, text_data):
-        text_data_json = json.loads(text_data)
+        text_data_json: ClientMessage = json.loads(text_data)
 
         # Description Generation
 
-        prompt = construct_critter_description_prompt(text_data_json)
+        characteristics = text_data_json["characteristics"]
+
+        # Validate the characteristics
+
+        invalid_characteristics = []
+        for characteristic in characteristics:
+            if characteristic not in allowed_characteristics:
+                invalid_characteristics.append(characteristic)
+        if invalid_characteristics:
+            self.send(
+                text_data=json.dumps(
+                    {
+                        "type": "error",
+                        "error": f"Invalid characteristics: {', '.join(invalid_characteristics)}",
+                    }
+                )
+            )
+            return
 
         stream = client.chat.completions.create(
             model="gpt-3.5-turbo",
-            messages=[{"role": "user", "content": prompt}],
+            messages=[
+                {
+                    "role": "system",
+                    "content": "You are a critter description generator. Whenever a user sends a list of characteristics, you describe a critter with those characteristics.",
+                },
+                {"role": "user", "content": ", ".join(characteristics)},
+            ],
             stream=True,
         )
 
@@ -49,13 +100,25 @@ class CritterDescriptionConsumer(WebsocketConsumer):
 
         # Image Generation
 
-        image_response = client.images.generate(
-            model="dall-e-3",
-            prompt=description,
-            size="1024x1024",
-            n=1,
-            quality="standard",
-        )
+        try:
+            image_response = client.images.generate(
+                model="dall-e-3",
+                prompt=description,
+                size="1024x1024",
+                n=1,
+                quality="standard",
+            )
+        except openai.BadRequestError as e:
+            # You might end up here if an image violates OpenAI's content policy
+            self.send(
+                text_data=json.dumps(
+                    {
+                        "type": "error",
+                        "error": str("An error occurred while generating the image."),
+                    }
+                )
+            )
+            return
 
         image_url = image_response.data[0].url
 
