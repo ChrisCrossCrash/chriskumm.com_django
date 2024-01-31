@@ -2,5 +2,5 @@
   // 88 character ruler to match Black's default line length.
   "editor.rulers": [
     88
-  ]
+  ],
 }
