@@ -1,6 +1,11 @@
+# Custom Logging Configuration
+# https://docs.djangoproject.com/en/5.0/topics/logging/#module-django.utils.log
+
 CUSTOM_LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
+    # A filter is used to provide additional control over which log records are passed
+    # from logger to handler.
     "filters": {
         "require_debug_false": {
             "()": "django.utils.log.RequireDebugFalse",
@@ -9,6 +14,10 @@ CUSTOM_LOGGING = {
             "()": "django.utils.log.RequireDebugTrue",
         },
     },
+    # Ultimately, a log record needs to be rendered as text. Formatters describe the
+    # exact format of that text. A formatter usually consists of a Python formatting
+    # string containing LogRecord attributes; however, you can also write custom
+    # formatters to implement specific formatting behavior.
     "formatters": {
         "django.server": {
             "()": "django.utils.log.ServerFormatter",
@@ -16,6 +25,9 @@ CUSTOM_LOGGING = {
             "style": "{",
         }
     },
+    # The handler is the engine that determines what happens to each message in a
+    # logger. It describes a particular logging behavior, such as writing a message to
+    # the screen, to a file, or to a network socket.
     "handlers": {
         "console": {
             "level": "INFO",
@@ -35,6 +47,8 @@ CUSTOM_LOGGING = {
             "class": "django.utils.log.AdminEmailHandler",
         },
     },
+    # A logger is the entry point into the logging system. Each logger is a named
+    # bucket to which messages can be written for processing.
     "loggers": {
         "django": {
             "handlers": ["console", "mail_admins"],
