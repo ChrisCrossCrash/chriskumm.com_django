@@ -3,15 +3,10 @@
 
 CUSTOM_LOGGING = {
     "version": 1,
-    # If the disable_existing_loggers key in the LOGGING dictConfig is set to True
-    # (which is the dictConfig default if the key is missing) then all loggers from the
-    # default configuration will be disabled. Disabled loggers are not the same as
-    # removed; the logger will still exist, but will silently discard anything logged to
-    # it, not even propagating entries to a parent logger. Thus you should be very
-    # careful using 'disable_existing_loggers': True; it’s probably not what you want.
-    # Instead, you can set disable_existing_loggers to False and redefine some or all of
-    # the default loggers; or you can set LOGGING_CONFIG to None and handle logging
-    # config yourself.
+    # Disabling existing loggers is not the same as removing them. That is why, rather
+    # than setting disable_existing_loggers to True, we set it to False and set
+    # LOGGING_CONFIG to None in settings.py. Then we load this logging configuration
+    # with logging.config.dictConfig(CUSTOM_LOGGING) in settings.py.
     # https://docs.djangoproject.com/en/5.0/topics/logging/#configuring-logging
     "disable_existing_loggers": False,
     # A filter is used to provide additional control over which log records are passed
