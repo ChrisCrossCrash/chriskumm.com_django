@@ -1,4 +1,5 @@
 import json
+import logging
 from typing import NamedTuple
 
 from channels.generic.websocket import WebsocketConsumer
@@ -6,7 +7,13 @@ from decouple import config
 import openai
 
 
+logger = logging.getLogger(__name__)
+
+
 client = openai.OpenAI(api_key=config("OPENAI_API_KEY"))
+
+
+logger.info(f"OpenAI API client created: {client.user_agent}")
 
 
 # TODO: Load these from a file or database
