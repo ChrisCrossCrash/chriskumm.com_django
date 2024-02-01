@@ -1,7 +1,7 @@
 import json
 from typing import NamedTuple
 
-from channels.generic.websocket import AsyncWebsocketConsumer, WebsocketConsumer
+from channels.generic.websocket import WebsocketConsumer
 from decouple import config
 import openai
 
