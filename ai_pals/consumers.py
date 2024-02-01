@@ -5,7 +5,7 @@ from channels.generic.websocket import WebsocketConsumer
 from decouple import config
 import openai
 
-# TODO: Is this where the client should be defined?
+
 client = openai.OpenAI(api_key=config("OPENAI_API_KEY"))
 
 
