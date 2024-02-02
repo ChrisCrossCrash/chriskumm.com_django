@@ -6,7 +6,7 @@
   "configurations": [
     {
       "name": "Django: Runserver",
-      "type": "python",
+      "type": "debugpy",
       "request": "launch",
       "program": "${workspaceFolder}/manage.py",
       "args": [
@@ -16,7 +16,7 @@
     },
     {
       "name": "test - coverage",
-      "type": "python",
+      "type": "debugpy",
       "request": "launch",
       "module": "coverage",
       "args": [
@@ -29,7 +29,7 @@
     },
     {
       "name": "testserver",
-      "type": "python",
+      "type": "debugpy",
       "request": "launch",
       "program": "${workspaceFolder}/manage.py",
       "args": [
@@ -42,7 +42,7 @@
     },
     {
       "name": "test",
-      "type": "python",
+      "type": "debugpy",
       "request": "launch",
       "program": "${workspaceFolder}/manage.py",
       "args": [
