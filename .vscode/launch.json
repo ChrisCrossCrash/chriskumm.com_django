@@ -5,6 +5,16 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Django: Runserver",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/manage.py",
+      "args": [
+        "runserver",
+      ],
+      "django": true
+    },
+    {
       "name": "test - coverage",
       "type": "python",
       "request": "launch",
