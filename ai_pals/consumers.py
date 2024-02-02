@@ -88,6 +88,7 @@ class CritterGenerationConsumer(WebsocketConsumer):
                 {"role": "user", "content": ", ".join(characteristics)},
             ],
             stream=True,
+            user=self.channel_name,
         )
 
         description = ""
@@ -113,6 +114,7 @@ class CritterGenerationConsumer(WebsocketConsumer):
                 size="1024x1024",
                 n=1,
                 quality="standard",
+                user=self.channel_name,
             )
         except openai.BadRequestError as e:
             # You might end up here if an image violates OpenAI's content policy
