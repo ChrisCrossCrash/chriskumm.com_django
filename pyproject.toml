@@ -18,7 +18,7 @@ requests = "^2.27.1"
 Pillow = "^12.0.0"
 daphne = "^4.0.0"
 twisted = "^26.0.0"
-openai = "^1.9.0"
+openai = "^2.0.0"
 django-solo = "^2.1.0"
 django-modern-user = "^6.0.0"
 channels = {extras = ["daphne"], version = "^4.0.0"}
