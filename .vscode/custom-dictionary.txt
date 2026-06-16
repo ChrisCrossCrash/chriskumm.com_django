@@ -1,5 +1,6 @@
 ABUSEIPDB
 ASGI
+authtoken
 charmap
 chriskumm
 ckeditor

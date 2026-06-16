@@ -7,6 +7,7 @@ urlpatterns = [
     path("admin/", core_admin_site.urls),
     path("api/art/", include("art.urls")),
     path("api/ai-chat/", include("ai_chat.urls")),
+    path("api/benchmark/", include("benchmark.urls")),
 ]
 
 if settings.DEBUG:

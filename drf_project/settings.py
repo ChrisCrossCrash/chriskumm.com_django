@@ -69,7 +69,9 @@ INSTALLED_APPS = [
     "core.apps.CoreConfig",
     "art.apps.ArtConfig",
     "ai_chat",
+    "benchmark",
     # Third-party
+    "rest_framework.authtoken",
     "rest_framework",
     "corsheaders",
     "ckeditor",
