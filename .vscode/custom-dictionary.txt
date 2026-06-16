@@ -4,10 +4,14 @@ charmap
 chriskumm
 ckeditor
 corsheaders
+DALL
 djangorestframework
 dumpdata
 Insta
 Kumm
+makemigrations
+RECAPTCHA
+runserver
 Scayt
 testserver
 venv
