@@ -8,7 +8,6 @@ from typing import Dict
 import requests
 from .models import SystemMessage
 
-
 client = OpenAI(api_key=config("OPENAI_API_KEY"))
 
 

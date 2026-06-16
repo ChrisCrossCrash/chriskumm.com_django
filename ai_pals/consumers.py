@@ -6,7 +6,6 @@ from channels.generic.websocket import WebsocketConsumer
 from decouple import config
 import openai
 
-
 logger = logging.getLogger(__name__)
 
 
