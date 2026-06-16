@@ -11,9 +11,12 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 import logging.config
+import os
 from pathlib import Path
 
-from decouple import config
+from dotenv import load_dotenv
+
+load_dotenv()
 
 from drf_project.custom_logging import CUSTOM_LOGGING
 
@@ -24,10 +27,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SITE_NAME = "Chris Kumm Web Designs"
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config("SECRET_KEY")
+SECRET_KEY = os.environ["SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config("DEBUG", cast=bool)
+DEBUG = os.environ.get("DEBUG", "False") == "True"
 
 ALLOWED_HOSTS = [".chriskumm.com"]
 if DEBUG:
@@ -156,7 +159,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = config("TIME_ZONE")
+TIME_ZONE = os.environ["TIME_ZONE"]
 
 USE_I18N = False
 
@@ -184,10 +187,10 @@ if not DEBUG:
 # Email
 # https://docs.djangoproject.com/en/3.1/topics/email/#email-backends
 
-EMAIL_HOST = config("EMAIL_HOST")
+EMAIL_HOST = os.environ["EMAIL_HOST"]
 EMAIL_PORT = 587
-EMAIL_HOST_USER = config("EMAIL_HOST_USER")
-EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD")
+EMAIL_HOST_USER = os.environ["EMAIL_HOST_USER"]
+EMAIL_HOST_PASSWORD = os.environ["EMAIL_HOST_PASSWORD"]
 EMAIL_USE_TLS = True
 
 # default SERVER_EMAIL is root@localhost
@@ -277,7 +280,7 @@ CORS_ALLOW_ALL_ORIGINS = DEBUG
 # AbuseIPDB API Key
 # https://www.abuseipdb.com/account/api
 
-ABUSEIPDB_API_KEY = config("ABUSEIPDB_API_KEY")
+ABUSEIPDB_API_KEY = os.environ["ABUSEIPDB_API_KEY"]
 
 
 # Without setting a max length, a hacker could spam the entire works of William Shakespeare

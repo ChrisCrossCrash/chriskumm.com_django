@@ -3,18 +3,18 @@ from rest_framework.response import Response
 from django.conf import settings
 import json
 from openai import OpenAI
-from decouple import config
+import os
 from typing import Dict
 import requests
 from .models import SystemMessage
 
-client = OpenAI(api_key=config("OPENAI_API_KEY"))
+client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
 
 
 def verify_recaptcha_token(recaptcha_token: str) -> Dict[str, object]:
     """Verify the client-provided reCAPTCHA token with Google's reCAPTCHA verify API."""
     payload = {
-        "secret": config("RECAPTCHA_SECRET_KEY"),
+        "secret": os.environ["RECAPTCHA_SECRET_KEY"],
         "response": recaptcha_token,
     }
     headers = {"Content-Type": "application/x-www-form-urlencoded; charset=utf-8"}

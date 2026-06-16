@@ -3,13 +3,13 @@ import logging
 from typing import NamedTuple
 
 from channels.generic.websocket import WebsocketConsumer
-from decouple import config
+import os
 import openai
 
 logger = logging.getLogger(__name__)
 
 
-client = openai.OpenAI(api_key=config("OPENAI_API_KEY"))
+client = openai.OpenAI(api_key=os.environ["OPENAI_API_KEY"])
 
 
 logger.info(f"OpenAI API client created: {client.user_agent}")
