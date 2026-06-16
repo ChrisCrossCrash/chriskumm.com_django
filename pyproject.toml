@@ -4,6 +4,7 @@ version = "1.0.0"
 description = "Django back end for ChrisKumm.com"
 authors = ["Christopher Kumm <chrislkumm@protonmail.com>"]
 license = "UNLICENSED"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.10"
