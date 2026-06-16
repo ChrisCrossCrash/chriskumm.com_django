@@ -15,9 +15,9 @@ django-admin-interface = "^0.32.0"
 djangorestframework = "^3.13.1"
 django-cors-headers = "^4.0.0"
 requests = "^2.27.1"
-Pillow = "^10.1.0"
+Pillow = "^12.0.0"
 daphne = "^4.0.0"
-twisted = "^23.10.0"
+twisted = "^26.0.0"
 openai = "^1.9.0"
 django-solo = "^2.1.0"
 django-modern-user = "^6.0.0"
@@ -25,8 +25,8 @@ channels = {extras = ["daphne"], version = "^4.0.0"}
 channels-redis = "^4.2.0"
 
 [tool.poetry.group.dev.dependencies]
-pre-commit = "^3.3.3"
-black = "^24.1.1"
+pre-commit = "^4.0.0"
+black = "^26.0.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
