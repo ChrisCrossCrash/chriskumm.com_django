@@ -5,6 +5,7 @@
     "gruntfuggly.todo-tree",
     "ms-python.python",
     "ms-python.vscode-pylance",
-    "ecmel.vscode-html-css"
+    "ecmel.vscode-html-css",
+    "streetsidesoftware.code-spell-checker"
   ]
 }

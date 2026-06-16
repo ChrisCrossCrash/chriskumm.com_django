@@ -1,0 +1,14 @@
+ABUSEIPDB
+ASGI
+charmap
+chriskumm
+ckeditor
+corsheaders
+djangorestframework
+dumpdata
+Insta
+Kumm
+Scayt
+testserver
+venv
+virtualenvs

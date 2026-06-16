@@ -1,0 +1,33 @@
+// To run spell check, first install cspell globally:
+// npm install -g cspell
+// Then run from the project root:
+// cspell --gitignore --config .vscode/cspell.json .
+{
+  "version": "0.2",
+  "language": "en",
+  "dictionaries": [
+    "custom"
+  ],
+  "dictionaryDefinitions": [
+    {
+      "name": "custom",
+      "path": "./custom-dictionary.txt"
+    }
+  ],
+  "ignorePaths": [
+    "**/__pycache__/**",
+    "**/*.pyc",
+    "**/migrations/**",
+    ".venv/**",
+    "node_modules/**",
+    "media/**",
+    "db.sqlite3",
+    "poetry.lock",
+    "art/fixtures/**"
+  ],
+  "enableFiletypes": [
+    "python",
+    "shellscript",
+    "toml"
+  ]
+}
