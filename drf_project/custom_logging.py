@@ -68,9 +68,5 @@ CUSTOM_LOGGING = {
             "handlers": ["console"],
             "level": "INFO",
         },
-        "ai_pals": {
-            "handlers": ["console"],
-            "level": "INFO",
-        },
     },
 }

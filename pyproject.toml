@@ -21,8 +21,6 @@ twisted = "^26.0.0"
 openai = "^2.0.0"
 django-solo = "^2.1.0"
 django-modern-user = "^6.0.0"
-channels = {extras = ["daphne"], version = "^4.0.0"}
-channels-redis = "^4.2.0"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^4.0.0"

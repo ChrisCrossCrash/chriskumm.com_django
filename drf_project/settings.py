@@ -69,7 +69,6 @@ INSTALLED_APPS = [
     "core.apps.CoreConfig",
     "art.apps.ArtConfig",
     "ai_chat",
-    "ai_pals",
     # Third-party
     "rest_framework",
     "corsheaders",
@@ -289,14 +288,3 @@ ABUSEIPDB_API_KEY = os.environ["ABUSEIPDB_API_KEY"]
 # Be sure to match this with validation in the front end.
 
 MESSAGE_MAX_LENGTH = 5000
-
-
-# Channels
-# https://channels.readthedocs.io/en/latest/tutorial/part_2.html#enable-a-channel-layer
-ASGI_APPLICATION = "drf_project.asgi.application"
-CHANNEL_LAYERS = {
-    # A simple in-memory channel layer for development and small projects.
-    "default": {
-        "BACKEND": "channels.layers.InMemoryChannelLayer",
-    },
-}
