@@ -9,11 +9,14 @@ from rest_framework.decorators import (
     api_view,
     authentication_classes,
     permission_classes,
+    renderer_classes,
 )
 from rest_framework.exceptions import ValidationError
+from rest_framework.renderers import JSONRenderer
 from rest_framework.response import Response
 
 from .permissions import IsAuthenticatedUnlessDebug
+from .renderers import EventStreamRenderer
 
 _DOWNLOAD_MAX = 100 * 1024 * 1024
 _CHUNK = 65536
@@ -70,6 +73,7 @@ def _int_param(request, name, default=None):
 
 
 @api_view(["GET"])
+@renderer_classes([EventStreamRenderer, JSONRenderer])
 @authentication_classes(_auth)
 @permission_classes(_perms)
 def sse(request):

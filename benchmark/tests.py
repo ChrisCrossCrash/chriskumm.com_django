@@ -145,6 +145,30 @@ class SseTests(APITestCase):
         body = _read_streaming(response)
         self.assertTrue(body.startswith(b"retry: 3000\n\n"))
 
+    def test_event_stream_accept_header_negotiates(self):
+        """Regression: EventSource sends `Accept: text/event-stream`, which
+        DRF content negotiation rejected with 406 before EventStreamRenderer
+        was registered on the view."""
+        response = self.client.get(
+            f"{self.url}?count=1&interval_ms=0",
+            HTTP_AUTHORIZATION=self.auth_header,
+            HTTP_ACCEPT="text/event-stream",
+        )
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response["Content-Type"], "text/event-stream")
+        self.assertEqual(len(_parse_sse(_read_streaming(response))), 1)
+
+    def test_error_with_event_stream_accept_returns_json_body(self):
+        """Error responses negotiated to EventStreamRenderer must still
+        render a valid JSON body rather than crashing."""
+        response = self.client.get(
+            f"{self.url}?count=nope",
+            HTTP_AUTHORIZATION=self.auth_header,
+            HTTP_ACCEPT="text/event-stream",
+        )
+        self.assertEqual(response.status_code, 400)
+        self.assertEqual(json.loads(response.content), {"count": "must be an integer"})
+
     def test_count_limits_number_of_events(self):
         response = self.client.get(
             f"{self.url}?count=5&interval_ms=0",
